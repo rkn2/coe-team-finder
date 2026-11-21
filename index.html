@@ -400,7 +400,7 @@ function renderHistory(){
 
 // ---------- people dialog ----------
 function profileHTML(p){
-  return `<h2 style="margin-top:0">${esc(p.name)}</h2><p class="muted">${esc(p.title)}<br>${esc(p.department)}<br><a href="mailto:${esc(p.email)}">${esc(p.email)}</a>${p.website ? ` · <a href="${esc(p.website)}" target="_blank" rel="noopener">website</a>` : ""}${p.uid && !p.added ? ` · <a href="https://www.engr.psu.edu/directory/directory-detail-g.aspx?q=${esc(p.uid.toUpperCase())}" target="_blank" rel="noopener">directory profile</a>` : ""}</p>
+  return `<h2 style="margin-top:0">${esc(p.name)}</h2><p class="muted">${esc(p.title)}<br>${esc(p.department)}<br><a href="mailto:${esc(p.email)}">${esc(p.email)}</a>${/^https?:\/\//i.test(p.website||"") ? ` · <a href="${esc(p.website)}" target="_blank" rel="noopener">website</a>` : ""}${p.uid && !p.added ? ` · <a href="https://www.engr.psu.edu/directory/directory-detail-g.aspx?q=${esc(p.uid.toUpperCase())}" target="_blank" rel="noopener">directory profile</a>` : ""}</p>
     ${(p.areas||[]).length ? `<p>${p.areas.map(a => `<span class="pill">${esc(a)}</span>`).join("")}</p>` : ""}
     ${(p.topics||[]).length ? `<p class="small muted">Topics ${esc(p.topics.join("; "))}</p>` : ""}
     ${(p.recent_papers||[]).length ? `<p><b>Recent papers</b></p><ul class="small">${p.recent_papers.map(x => `<li>${esc(x.title)} ${x.year ? `(${x.year})` : ""}</li>`).join("")}</ul>` : ""}

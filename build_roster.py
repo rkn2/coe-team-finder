@@ -203,24 +203,32 @@ def main():
                 p.update(fix)
 
     # co-authors inside the roster, from the author lists on profile publications
-    bykey = defaultdict(list)
+    byfull, byinit = defaultdict(list), defaultdict(list)
     for p in people:
-        k = name_key(p["name"])
-        if k:
-            bykey[k].append(p["uid"])
+        w = fold(p["name"])
+        if len(w) >= 2:
+            byfull[(w[0], w[-1])].append(p["uid"])
+            byinit[(w[0][0], w[-1])].append(p["uid"])
+
+    def match(author):
+        w = fold(author)
+        if len(w) < 2:
+            return None
+        # a full first name must match exactly; an initial-only name matches on initial + surname
+        hits = byinit.get((w[0][0], w[-1]), []) if len(w[0]) == 1 else byfull.get((w[0], w[-1]), [])
+        return hits[0] if len(hits) == 1 else None
+
     links = Counter()
     for p in people:
         for pub in p.pop("_all_pubs", []):
             if pub["year"] < 2016:
                 continue
-            names = re.split(r",\s*|\s+and\s+", pub["authors"])
-            found = set()
+            names = [n for n in re.split(r",\s*|\s+and\s+", pub["authors"]) if n.strip()]
+            if len(names) > 25:
+                continue
             for nm in names:
-                k = name_key(nm)
-                if k and len(bykey.get(k, [])) == 1 and bykey[k][0] != p["uid"]:
-                    found.add(bykey[k][0])
-            if len(names) <= 25:
-                for o in found:
+                o = match(nm)
+                if o and o != p["uid"]:
                     links[tuple(sorted((p["uid"], o)))] += 1
     co = defaultdict(set)
     for (a, b), w in links.items():
@@ -229,6 +237,13 @@ def main():
         p["coauthors"] = sorted(co[p["uid"]])
         p["recent_papers"] = [{"year": x["year"], "title": x["title"]} for x in p["recent_papers"]]
 
+    prev_path = os.path.join(HERE, "roster.json")
+    if os.path.exists(prev_path):
+        prev = json.load(open(prev_path))["people"]
+        has = lambda ps: sum(1 for x in ps if x.get("areas") or x.get("recent_papers") or x.get("topics"))
+        if len(people) < 0.9 * len(prev) or has(people) < 0.9 * has(prev):
+            raise SystemExit(f"refusing to write: {len(people)} people ({has(people)} with research) vs "
+                             f"{len(prev)} ({has(prev)}) in the current roster.json")
     out = {"built": time.strftime("%Y-%m-%d"),
            "source": "Penn State College of Engineering Faculty & Staff Directory profiles, with OpenAlex for gaps",
            "count": len(people), "people": people,
