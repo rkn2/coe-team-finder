@@ -29,12 +29,13 @@ def get(url, path, data=None, refresh=False):
                 t = r.read().decode("utf-8", "replace")
             break
         except Exception as e:
-            print(f"  fetch failed ({attempt+1}/3) {url}: {e!r}", file=sys.stderr)
-            time.sleep(3 * (attempt + 1))
+            print(f"  fetch failed ({attempt+1}/3) {url.split('&api_key=')[0]}: {e!r}", file=sys.stderr)
+            # OpenAlex rate limits (429) need a real pause
+            time.sleep((20 if "429" in repr(e) else 3) * (attempt + 1))
     else:
         raise RuntimeError(f"could not fetch {url}")
     open(path, "w", encoding="utf-8").write(t)
-    time.sleep(0.7)
+    time.sleep(1.2 if "openalex" in url else 0.7)
     return t
 
 
@@ -147,7 +148,9 @@ def main():
         os.makedirs(f"{args.cache}/{d}", exist_ok=True)
     key = ""
     kp = os.path.expanduser("~/.config/openalex/api_key")
-    if os.path.exists(kp):
+    if os.environ.get("OPENALEX_API_KEY"):
+        key = os.environ["OPENALEX_API_KEY"].strip()
+    elif os.path.exists(kp):
         key = open(kp).read().strip()
     ov = json.load(open(os.path.join(HERE, "overrides.json"))) if os.path.exists(os.path.join(HERE, "overrides.json")) else {}
 
@@ -241,7 +244,7 @@ def main():
     if os.path.exists(prev_path):
         prev = json.load(open(prev_path))["people"]
         has = lambda ps: sum(1 for x in ps if x.get("areas") or x.get("recent_papers") or x.get("topics"))
-        if len(people) < 0.9 * len(prev) or has(people) < 0.9 * has(prev):
+        if len(people) < 0.9 * len(prev) or has(people) < 0.97 * has(prev):
             raise SystemExit(f"refusing to write: {len(people)} people ({has(people)} with research) vs "
                              f"{len(prev)} ({has(prev)}) in the current roster.json")
     out = {"built": time.strftime("%Y-%m-%d"),
