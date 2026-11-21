@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Check the directory is reachable
-        run: curl -sS -o /dev/null -w "%{http_code}\n" --max-time 30 https://www.engr.psu.edu/directory/index.aspx
+        run: curl -fsS -o /dev/null -w "%{http_code}\n" --max-time 60 https://www.engr.psu.edu/directory/index.aspx
       - name: Build roster
         run: python3 build_roster.py --cache "$RUNNER_TEMP/cache" --refresh
       - name: Commit if changed
