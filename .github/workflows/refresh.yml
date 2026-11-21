@@ -1,0 +1,27 @@
+name: Refresh roster
+on:
+  schedule:
+    - cron: "0 9 1 * *"   # 9:00 UTC on the 1st of each month
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the directory is reachable
+        run: curl -sS -o /dev/null -w "%{http_code}\n" --max-time 30 https://www.engr.psu.edu/directory/index.aspx
+      - name: Build roster
+        run: python3 build_roster.py --cache "$RUNNER_TEMP/cache" --refresh
+      - name: Commit if changed
+        run: |
+          git config user.name "roster-bot"
+          git config user.email "roster-bot@users.noreply.github.com"
+          git add roster.json review.json
+          git diff --cached --quiet || git commit -m "Monthly roster refresh"
+          git push

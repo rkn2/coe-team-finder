@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoE Team Finder</title>
+<meta name="description" content="Paste a funding call and get three possible Penn State College of Engineering teams, using your own Claude API key.">
+<style>
+:root{
+  --bg:#f6f7f9;--panel:#ffffff;--ink:#1b2430;--muted:#5b6675;--line:#dde2e8;
+  --accent:#1e407c;--accent-ink:#ffffff;--soft:#eaf0f8;--in:#1f7a4d;--maybe:#a36a00;--out:#a33a3a;
+  --code:#f2f4f7;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12161c;--panel:#1a2029;--ink:#e6eaf0;--muted:#9aa5b3;--line:#2c3440;
+    --accent:#8fb3ef;--accent-ink:#0d1420;--soft:#1f2a3a;--in:#5cc492;--maybe:#e0a93a;--out:#e07a7a;--code:#222a35;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12161c;--panel:#1a2029;--ink:#e6eaf0;--muted:#9aa5b3;--line:#2c3440;
+  --accent:#8fb3ef;--accent-ink:#0d1420;--soft:#1f2a3a;--in:#5cc492;--maybe:#e0a93a;--out:#e07a7a;--code:#222a35;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:28px 16px 8px;max-width:1100px;margin:0 auto}
+h1{margin:0 0 4px;font-size:26px}
+header p{margin:0;color:var(--muted);max-width:760px}
+main{max-width:1100px;margin:0 auto;padding:8px 16px 48px;display:grid;gap:16px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.panel h2{margin:0 0 8px;font-size:17px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+input[type=text],input[type=password],textarea,select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+textarea{min-height:150px;resize:vertical}
+button,.btn{padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+button:disabled{opacity:.55;cursor:default}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}
+.tabs button[aria-selected=true]{background:var(--soft);border-color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.table-wrap{overflow-x:auto}
+.status button{padding:3px 8px;font-size:13px}
+.status button.on[data-s=in]{background:var(--in);color:#fff;border-color:var(--in)}
+.status button.on[data-s=maybe]{background:var(--maybe);color:#fff;border-color:var(--maybe)}
+.status button.on[data-s=out]{background:var(--out);color:#fff;border-color:var(--out)}
+tr.isout td{opacity:.5}
+pre{background:var(--code);padding:12px;border-radius:8px;white-space:pre-wrap;word-wrap:break-word;font:13px/1.5 ui-monospace,Menlo,monospace;margin:0}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;background:var(--soft);font-size:12px;margin:0 4px 4px 0}
+.err{color:var(--out)}
+.person-link{color:var(--accent);cursor:pointer;text-decoration:underline}
+dialog{border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);max-width:640px;width:calc(100% - 32px)}
+dialog::backdrop{background:rgba(0,0,0,.4)}
+details summary{cursor:pointer}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:s 1s linear infinite;vertical-align:-2px}
+@keyframes s{to{transform:rotate(360deg)}}
+footer{max-width:1100px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font-size:13px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <h1>CoE Team Finder</h1>
+  <p>Paste a funding call and get three possible teams from Penn State College of Engineering faculty, each with reasons, the expertise still missing, and a draft intro email. It runs on your own Claude API key, and nothing is sent anywhere except to Anthropic.</p>
+</header>
+<main>
+  <div class="grid2">
+    <section class="panel" aria-labelledby="k-h">
+      <h2 id="k-h">1. Your Claude API key</h2>
+      <p class="small muted">Get one at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>. The key stays in this browser and only goes to Anthropic. A search costs roughly 10 to 30 cents with Opus and less with Sonnet.</p>
+      <div class="row">
+        <input type="password" id="key" placeholder="sk-ant-..." autocomplete="off" style="flex:1;min-width:200px">
+        <button id="clearKey" title="Remove the key from this browser">Clear key</button>
+      </div>
+      <label class="small row" style="margin-top:8px"><input type="checkbox" id="remember" checked> Remember the key in this browser</label>
+      <div class="row" style="margin-top:8px">
+        <label class="small" for="model">Model</label>
+        <select id="model" style="width:auto">
+          <option value="claude-opus-5-5">Claude Opus 5.5 (best)</option>
+          <option value="claude-sonnet-5-5">Claude Sonnet 5.5 (cheaper)</option>
+        </select>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="r-h">
+      <h2 id="r-h">2. The people</h2>
+      <p id="rosterInfo" class="small muted">Loading the college roster...</p>
+      <div class="row">
+        <button id="viewRoster">Browse people</button>
+        <button id="dlCsv">Download as CSV</button>
+        <label class="btn" for="upCsv">Add or update people from a CSV</label>
+        <input type="file" id="upCsv" accept=".csv,text/csv" hidden>
+        <button id="resetRoster" title="Remove people you added and go back to the college roster">Reset</button>
+      </div>
+      <p class="small muted" style="margin-top:8px">Your CSV can add people or fix someone's research. It is matched on email and kept only in this browser. Use the columns from the download (name, email, department, title, research, keywords, recent_papers).</p>
+    </section>
+  </div>
+
+  <section class="panel" aria-labelledby="c-h">
+    <h2 id="c-h">3. The funding call</h2>
+    <div class="row" style="margin-bottom:8px">
+      <input type="text" id="cTitle" placeholder="Title" style="flex:2;min-width:220px">
+      <input type="text" id="cDeadline" placeholder="Deadline" style="flex:1;min-width:120px">
+      <input type="text" id="cLink" placeholder="Link" style="flex:2;min-width:200px">
+    </div>
+    <textarea id="cText" placeholder="Paste the synopsis or the full call text. The more of the call's own wording, the better the match."></textarea>
+    <div class="row" style="margin-top:8px">
+      <input type="text" id="signer" placeholder="Your name, for signing the draft emails" style="flex:1;min-width:220px">
+      <button class="primary" id="build">Build teams</button>
+      <span id="buildStatus" class="small muted"></span>
+    </div>
+  </section>
+
+  <section class="panel" id="results" hidden aria-live="polite">
+    <h2 id="resTitle">Teams</h2>
+    <p id="resSummary" class="muted"></p>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div id="optionView"></div>
+    <details style="margin-top:12px"><summary>Others worth a look</summary><div id="also" style="margin-top:8px"></div></details>
+    <details style="margin-top:8px"><summary>Which people were sent to Claude</summary><p id="candInfo" class="small muted"></p></details>
+  </section>
+
+  <section class="panel" id="history" hidden>
+    <h2>Earlier searches in this browser</h2>
+    <div id="histList" class="small"></div>
+  </section>
+</main>
+<footer>
+  The roster comes from public Penn State College of Engineering directory profiles (research areas and recent publications), with OpenAlex filling gaps. It is rebuilt now and then, so it can be out of date. Questions or fixes go to Rebecca Napolitano (napolitano@psu.edu). Code at <a href="https://github.com/rkn2/coe-team-finder">github.com/rkn2/coe-team-finder</a>.
+</footer>
+
+<dialog id="dlg"><div id="dlgBody"></div><div class="row" style="justify-content:flex-end;margin-top:12px"><button id="dlgClose">Close</button></div></dialog>
+
+<script type="module">
+import Anthropic from "https://cdn.jsdelivr.net/npm/@anthropic-ai/sdk@1.5.0/+esm";
+
+const $ = id => document.getElementById(id);
+const store = {
+  get(k, d){ try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  del(k){ try { localStorage.removeItem(k); } catch {} },
+};
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+// ---------- key ----------
+$("key").value = store.get("tf.key", "");
+$("signer").value = store.get("tf.signer", "");
+$("model").value = store.get("tf.model", "claude-opus-5-5");
+$("key").addEventListener("change", () => { if ($("remember").checked) store.set("tf.key", $("key").value.trim()); });
+$("remember").addEventListener("change", () => { if (!$("remember").checked) store.del("tf.key"); else store.set("tf.key", $("key").value.trim()); });
+$("clearKey").onclick = () => { $("key").value = ""; store.del("tf.key"); };
+$("signer").addEventListener("change", () => store.set("tf.signer", $("signer").value.trim()));
+$("model").addEventListener("change", () => store.set("tf.model", $("model").value));
+
+// ---------- roster ----------
+let base = [], built = "", people = [];
+function research(p){
+  return [ (p.areas||[]).join("; "), (p.topics||[]).join("; "), p.research || "" ].filter(Boolean).join(". ");
+}
+function mergeRoster(){
+  const extra = store.get("tf.extra", []);
+  const byEmail = new Map(base.map(p => [ (p.email||p.uid).toLowerCase(), {...p} ]));
+  for (const e of extra){
+    const k = (e.email || e.name).toLowerCase();
+    const cur = byEmail.get(k);
+    byEmail.set(k, cur ? {...cur, ...Object.fromEntries(Object.entries(e).filter(([,v]) => v && (!Array.isArray(v) || v.length)))} : e);
+  }
+  people = [...byEmail.values()];
+  people.forEach((p, i) => { p._i = i; if (!p.uid) p.uid = (p.email || p.name).toLowerCase().replace(/[^a-z0-9]+/g, "-"); });
+  const nExtra = extra.length;
+  $("rosterInfo").textContent = `${people.length} people in the roster (college roster built ${built}${nExtra ? `, plus ${nExtra} added or updated by you` : ""}).`;
+  buildIndex();
+}
+async function loadRoster(){
+  try {
+    const r = await fetch("roster.json", {cache: "no-cache"});
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const j = await r.json();
+    base = j.people; built = j.built;
+  } catch (e) {
+    $("rosterInfo").innerHTML = `<span class="err">Could not load the college roster (${esc(e.message)}). You can still upload your own CSV.</span>`;
+    base = []; built = "never";
+  }
+  mergeRoster();
+}
+
+// CSV
+function parseCSV(text){
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < text.length; i++){
+    const c = text[i];
+    if (q){ if (c === '"'){ if (text[i+1] === '"'){ f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ","){ row.push(f); f = ""; }
+    else if (c === "\n" || c === "\r"){ if (c === "\r" && text[i+1] === "\n") i++; row.push(f); rows.push(row); row = []; f = ""; }
+    else f += c;
+  }
+  if (f || row.length){ row.push(f); rows.push(row); }
+  const head = rows.shift().map(h => h.trim().toLowerCase());
+  return rows.filter(r => r.some(x => x.trim())).map(r => Object.fromEntries(head.map((h, i) => [h, (r[i]||"").trim()])));
+}
+const csvCell = v => /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v;
+$("dlCsv").onclick = () => {
+  const cols = ["name","email","department","title","research","keywords","recent_papers","website"];
+  const lines = [cols.join(",")].concat(people.map(p => [
+    p.name, p.email, p.department, p.title, (p.areas||[]).join("; ") || p.research || "",
+    (p.topics||[]).join("; ") || p.keywords || "", (p.recent_papers||[]).map(x => `${x.title} (${x.year})`).join("; "), p.website || ""
+  ].map(v => csvCell(String(v||""))).join(",")));
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([lines.join("\n")], {type: "text/csv"}));
+  a.download = "coe-team-finder-roster.csv"; a.click();
+};
+$("upCsv").onchange = async ev => {
+  const file = ev.target.files[0]; if (!file) return;
+  try {
+    const rows = parseCSV(await file.text());
+    const extra = store.get("tf.extra", []);
+    for (const r of rows){
+      if (!r.name) continue;
+      const p = {name: r.name, email: (r.email||"").toLowerCase(), department: r.department||"", title: r.title||"",
+                 research: r.research||"", keywords: r.keywords||"", website: r.website||"", added: true,
+                 recent_papers: (r.recent_papers||"").split(";").map(s => s.trim()).filter(Boolean).map(t => ({title: t.replace(/\s*\((\d{4})\)\s*$/, ""), year: (t.match(/\((\d{4})\)\s*$/)||[])[1] || ""}))};
+      if (p.research) p.areas = p.research.split(";").map(s => s.trim()).filter(Boolean);
+      if (p.keywords) p.topics = p.keywords.split(";").map(s => s.trim()).filter(Boolean);
+      const k = (p.email || p.name).toLowerCase();
+      const i = extra.findIndex(e => (e.email || e.name).toLowerCase() === k);
+      if (i >= 0) extra[i] = p; else extra.push(p);
+    }
+    store.set("tf.extra", extra); mergeRoster();
+  } catch (e) { alert("Could not read that CSV. " + e.message); }
+  ev.target.value = "";
+};
+$("resetRoster").onclick = () => { if (confirm("Remove the people you added or updated in this browser?")) { store.del("tf.extra"); mergeRoster(); } };
+
+// ---------- search index (BM25) ----------
+const STOP = new Set("a an and are as at be by for from has have in into is it its of on or our that the their this to with we will be using use based new via study research engineering systems system program proposals proposal projects project should include including support teams team".split(" "));
+const tok = s => (s||"").toLowerCase().normalize("NFKD").replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter(w => w.length > 2 && !STOP.has(w));
+let docs = [], df = new Map(), avgLen = 1;
+function docText(p){
+  return [ (p.areas||[]).join(" "), (p.areas||[]).join(" "), (p.topics||[]).join(" "), p.research||"", p.keywords||"",
+           (p.recent_papers||[]).map(x => x.title).join(" "), p.department||"" ].join(" ");
+}
+function buildIndex(){
+  df = new Map();
+  docs = people.map(p => { const t = tok(docText(p)); const tf = new Map(); t.forEach(w => tf.set(w, (tf.get(w)||0) + 1)); new Set(t).forEach(w => df.set(w, (df.get(w)||0) + 1)); return {tf, len: t.length}; });
+  avgLen = docs.reduce((a, d) => a + d.len, 0) / Math.max(docs.length, 1) || 1;
+}
+function candidates(text, k = 70){
+  const q = [...new Set(tok(text))], N = docs.length;
+  const scored = docs.map((d, i) => {
+    let s = 0;
+    for (const w of q){ const f = d.tf.get(w); if (!f) continue; const idf = Math.log(1 + (N - df.get(w) + .5) / (df.get(w) + .5)); s += idf * f * 2.2 / (f + 1.2 * (.25 + .75 * d.len / avgLen)); }
+    return [s, i];
+  }).filter(([s, i]) => s > 0 && docs[i].len > 0).sort((a, b) => b[0] - a[0]);
+  return scored.slice(0, k).map(([, i]) => people[i]);
+}
+
+// ---------- Claude ----------
+const SYSTEM = `You are a Team Finder for the Penn State College of Engineering. You put together research teams for funding calls from the roster you are given.
+
+Use ONLY people in the roster. Never invent people, papers, or emails. Refer to people by their roster id.
+
+Propose THREE different teams of 3 to 6 people, Option A, B, and C. Each option is a distinct strategy for competing, for example a different scientific angle, a different lead, or a small focused team versus a broader one. Give each option a 3 to 6 word name and one sentence on how the team would compete. For each person give their role on the team (for example Lead, Sensing, AI models, End users), one sentence on why they fit, and evidence (a paper title or a research area from the roster). Base every reason on what the roster says. Prefer complementary expertise over several people who do the same thing. People who are coauthors already work together, which is a plus for a lead pair. Name the best lead. List the expertise the call needs that nobody on the team covers.
+
+Also list up to four other people worth a look, with one short reason each.
+
+For each option, draft a short intro email to the team from the person using this tool. Open with "Hi all," and one line on why they are writing. Give one short line per person on who they are and what they would bring. Add one line on the call and its deadline, with the link if given. Close warmly and sign with the sender's name. Do not ask for a meeting or a call. Do not use dashes or colons inside sentences. Keep it brief and plain, in the first person.`;
+
+const SCHEMA = {
+  type: "object", additionalProperties: false, required: ["summary","options","also"],
+  properties: {
+    summary: {type: "string"},
+    options: {type: "array", items: {type: "object", additionalProperties: false, required: ["name","angle","lead","team","gaps","email_subject","email_body"],
+      properties: {
+        name: {type: "string"}, angle: {type: "string"}, lead: {type: "string"},
+        team: {type: "array", items: {type: "object", additionalProperties: false, required: ["id","role","why","evidence"],
+          properties: {id: {type: "string"}, role: {type: "string"}, why: {type: "string"}, evidence: {type: "string"}}}},
+        gaps: {type: "array", items: {type: "string"}},
+        email_subject: {type: "string"}, email_body: {type: "string"}
+      }}},
+    also: {type: "array", items: {type: "object", additionalProperties: false, required: ["id","why"], properties: {id: {type: "string"}, why: {type: "string"}}}}
+  }
+};
+
+function rosterBlock(cands){
+  const lines = cands.map(p => JSON.stringify({
+    id: p.uid, name: p.name, title: p.title, department: p.department,
+    research_areas: (p.areas||[]).join("; ") || p.research || "",
+    topics: (p.topics||[]).join("; ") || p.keywords || "",
+    recent_papers: (p.recent_papers||[]).slice(0, 5).map(x => `${x.title}${x.year ? ` (${x.year})` : ""}`),
+    coauthors_in_roster: (p.coauthors||[]).filter(c => cands.some(o => o.uid === c))
+  }));
+  return lines.join("\n");
+}
+
+$("build").onclick = async () => {
+  const key = $("key").value.trim();
+  const call = {title: $("cTitle").value.trim(), deadline: $("cDeadline").value.trim(), link: $("cLink").value.trim(), text: $("cText").value.trim()};
+  if (!key){ $("buildStatus").innerHTML = '<span class="err">Add your Claude API key first.</span>'; return; }
+  if (call.text.split(/\s+/).length < 25){ $("buildStatus").innerHTML = '<span class="err">Paste more of the call text. The match depends on its wording.</span>'; return; }
+  if ($("remember").checked) store.set("tf.key", key);
+  const cands = candidates(`${call.title} ${call.text}`);
+  if (cands.length < 6){ $("buildStatus").innerHTML = '<span class="err">Too few people matched the call wording to build teams.</span>'; return; }
+  const signer = $("signer").value.trim() || "[your name]";
+  $("build").disabled = true; $("buildStatus").innerHTML = '<span class="spin"></span> Claude is building teams. This can take a minute or two.';
+  try {
+    const client = new Anthropic({apiKey: key, dangerouslyAllowBrowser: true});
+    const model = $("model").value;
+    const stream = client.beta.messages.stream({
+      model, max_tokens: 32000,
+      betas: ["server-side-fallback-2026-07-01"],
+      fallbacks: "default",
+      thinking: {type: "adaptive"},
+      output_config: {effort: "medium", format: {type: "json_schema", schema: SCHEMA}},
+      system: SYSTEM,
+      messages: [{role: "user", content:
+        `ROSTER (one JSON object per line, ${cands.length} people pre-selected from ${people.length} as closest to the call)\n${rosterBlock(cands)}\n\n` +
+        `FUNDING CALL\nTitle ${call.title || "(none given)"}\nDeadline ${call.deadline || "(none given)"}\nLink ${call.link || "(none given)"}\n\n${call.text}\n\n` +
+        `The emails are from ${signer}.`}]
+    });
+    const msg = await stream.finalMessage();
+    if (msg.stop_reason === "refusal") throw new Error("Claude declined this request.");
+    if (msg.stop_reason === "max_tokens") throw new Error("The answer ran too long and was cut off. Try again.");
+    const text = msg.content.filter(b => b.type === "text").map(b => b.text).join("");
+    const out = JSON.parse(text);
+    const run = {id: Date.now(), at: new Date().toISOString(), call, model, cands: cands.map(p => p.uid), out, marks: {}, notes: {}};
+    const hist = store.get("tf.history", []); hist.unshift(run); store.set("tf.history", hist.slice(0, 20));
+    show(run);
+    const u = msg.usage || {};
+    $("buildStatus").textContent = `Done. ${u.input_tokens||"?"} input and ${u.output_tokens||"?"} output tokens.`;
+  } catch (e) {
+    console.error(e);
+    let m = e?.message || String(e);
+    if (e?.status === 401) m = "The API key was not accepted. Check it at console.anthropic.com.";
+    else if (e?.status === 429) m = "Rate limited by Anthropic. Wait a minute and try again.";
+    else if (e?.status === 400 && /credit/i.test(m)) m = "Your Anthropic account is out of credit. Add some at console.anthropic.com.";
+    $("buildStatus").innerHTML = `<span class="err">Something went wrong. ${esc(m)}</span>`;
+  } finally { $("build").disabled = false; renderHistory(); }
+};
+
+// ---------- results ----------
+let current = null, opt = 0;
+const byUid = uid => people.find(p => p.uid === uid);
+function saveRun(){ const h = store.get("tf.history", []); const i = h.findIndex(r => r.id === current.id); if (i >= 0){ h[i] = current; store.set("tf.history", h); } }
+function show(run){
+  current = run; opt = 0;
+  $("results").hidden = false;
+  $("resTitle").textContent = run.call.title || "Teams";
+  $("resSummary").textContent = run.out.summary;
+  $("tabs").innerHTML = run.out.options.map((o, i) => `<button role="tab" data-i="${i}" aria-selected="${i===0}">${"ABC"[i] || i+1}. ${esc(o.name)}</button>`).join("");
+  $("tabs").querySelectorAll("button").forEach(b => b.onclick = () => { opt = +b.dataset.i; $("tabs").querySelectorAll("button").forEach(x => x.setAttribute("aria-selected", x === b)); renderOption(); });
+  $("also").innerHTML = (run.out.also||[]).map(a => { const p = byUid(a.id); return `<div><span class="person-link" data-uid="${esc(a.id)}">${esc(p?.name || a.id)}</span> <span class="muted">(${esc(p?.department||"")})</span> ${esc(a.why)}</div>`; }).join("") || "<span class='muted'>None</span>";
+  $("candInfo").textContent = `${run.cands.length} people were picked from the roster by word overlap with the call and sent to ${run.model}. Anyone else was not considered for this search, so add people by hand below if someone is missing.`;
+  renderOption();
+  $("results").scrollIntoView({behavior: "smooth"});
+}
+function renderOption(){
+  const o = current.out.options[opt], k = `o${opt}`;
+  current.marks[k] = current.marks[k] || {}; current.notes[k] = current.notes[k] || {};
+  const extraIds = (current.notes[k]._added || []);
+  const team = o.team.concat(extraIds.map(id => ({id, role: "Added by you", why: "", evidence: ""})));
+  const rows = team.map(t => {
+    const p = byUid(t.id) || {name: t.id, department: "", email: ""};
+    const s = current.marks[k][t.id] || "";
+    return `<tr class="${s==="out"?"isout":""}"><td><span class="person-link" data-uid="${esc(t.id)}">${esc(p.name)}</span>${t.id===o.lead?' <span class="pill">Lead</span>':""}<div class="small muted">${esc(p.department)}</div></td>
+      <td>${esc(t.role)}</td><td>${esc(t.why)}<div class="small muted">${esc(t.evidence)}</div></td>
+      <td class="status" data-id="${esc(t.id)}">${["in","maybe","out"].map(x => `<button data-s="${x}" class="${s===x?"on":""}">${x==="in"?"In":x==="maybe"?"Maybe":"Out"}</button>`).join(" ")}
+      <input type="text" class="note" data-id="${esc(t.id)}" placeholder="Note" value="${esc(current.notes[k][t.id]||"")}" style="margin-top:4px"></td></tr>`;
+  }).join("");
+  const to = team.filter(t => current.marks[k][t.id] !== "out").map(t => byUid(t.id)?.email).filter(Boolean);
+  $("optionView").innerHTML = `<p><b>${esc(o.name)}.</b> ${esc(o.angle)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Person</th><th>Role</th><th>Why</th><th>In or out</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="row" style="margin-top:8px"><input type="text" id="addName" list="names" placeholder="Add someone from the roster by name" style="flex:1;min-width:200px"><button id="addBtn">Add</button></div>
+    <datalist id="names">${people.map(p => `<option value="${esc(p.name)}">`).join("")}</datalist>
+    <p style="margin-top:12px"><b>Missing expertise.</b> ${esc((o.gaps||[]).join("; ") || "None noted")}</p>
+    <p style="margin:12px 0 4px"><b>Draft email</b></p>
+    <pre id="emailPre">To ${esc(to.join("; "))}
+Subject ${esc(o.email_subject)}
+
+${esc(o.email_body)}</pre>
+    <div class="row" style="margin-top:8px"><button id="copyEmail">Copy email</button>
+      <a class="btn" href="mailto:${encodeURIComponent(to.join(","))}?subject=${encodeURIComponent(o.email_subject)}&body=${encodeURIComponent(o.email_body)}">Open in my mail app</a></div>
+    <textarea id="teamNotes" placeholder="Team notes" style="min-height:70px;margin-top:8px">${esc(current.notes[k]._team||"")}</textarea>`;
+  $("optionView").querySelectorAll(".status button").forEach(b => b.onclick = () => { const id = b.parentElement.dataset.id; current.marks[k][id] = current.marks[k][id] === b.dataset.s ? "" : b.dataset.s; saveRun(); renderOption(); });
+  $("optionView").querySelectorAll(".note").forEach(i => i.onchange = () => { current.notes[k][i.dataset.id] = i.value; saveRun(); });
+  $("teamNotes").onchange = () => { current.notes[k]._team = $("teamNotes").value; saveRun(); };
+  $("addBtn").onclick = () => { const p = people.find(x => x.name.toLowerCase() === $("addName").value.trim().toLowerCase()); if (!p) { alert("No one by that name in the roster."); return; } current.notes[k]._added = [...new Set([...(current.notes[k]._added||[]), p.uid])]; saveRun(); renderOption(); };
+  $("copyEmail").onclick = async () => { try { await navigator.clipboard.writeText($("emailPre").textContent); $("copyEmail").textContent = "Copied"; setTimeout(() => $("copyEmail").textContent = "Copy email", 1500); } catch { alert("Copy failed. Select the text and copy it by hand."); } };
+}
+function renderHistory(){
+  const h = store.get("tf.history", []);
+  $("history").hidden = !h.length;
+  $("histList").innerHTML = h.map(r => `<div class="row" style="justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0"><span>${esc(r.call.title || "(untitled call)")} <span class="muted">${new Date(r.at).toLocaleDateString()}</span></span><span><button data-open="${r.id}">Open</button> <button data-del="${r.id}">Delete</button></span></div>`).join("");
+  $("histList").querySelectorAll("[data-open]").forEach(b => b.onclick = () => show(h.find(r => r.id == b.dataset.open)));
+  $("histList").querySelectorAll("[data-del]").forEach(b => b.onclick = () => { store.set("tf.history", h.filter(r => r.id != b.dataset.del)); renderHistory(); });
+}
+
+// ---------- people dialog ----------
+function profileHTML(p){
+  return `<h2 style="margin-top:0">${esc(p.name)}</h2><p class="muted">${esc(p.title)}<br>${esc(p.department)}<br><a href="mailto:${esc(p.email)}">${esc(p.email)}</a>${p.website ? ` · <a href="${esc(p.website)}" target="_blank" rel="noopener">website</a>` : ""}${p.uid && !p.added ? ` · <a href="https://www.engr.psu.edu/directory/directory-detail-g.aspx?q=${esc(p.uid.toUpperCase())}" target="_blank" rel="noopener">directory profile</a>` : ""}</p>
+    ${(p.areas||[]).length ? `<p>${p.areas.map(a => `<span class="pill">${esc(a)}</span>`).join("")}</p>` : ""}
+    ${(p.topics||[]).length ? `<p class="small muted">Topics ${esc(p.topics.join("; "))}</p>` : ""}
+    ${(p.recent_papers||[]).length ? `<p><b>Recent papers</b></p><ul class="small">${p.recent_papers.map(x => `<li>${esc(x.title)} ${x.year ? `(${x.year})` : ""}</li>`).join("")}</ul>` : ""}
+    ${(p.coauthors||[]).length ? `<p class="small"><b>Coauthors in the roster</b> ${p.coauthors.map(c => byUid(c)?.name).filter(Boolean).map(esc).join(", ")}</p>` : ""}
+    ${p.research_source && p.research_source.startsWith("openalex") ? `<p class="small muted">Research filled in from OpenAlex because the directory profile had none.</p>` : ""}`;
+}
+document.addEventListener("click", e => { const t = e.target.closest(".person-link"); if (!t) return; const p = byUid(t.dataset.uid); if (!p) return; $("dlgBody").innerHTML = profileHTML(p); if (!$("dlg").open) $("dlg").showModal(); });
+$("dlgClose").onclick = () => $("dlg").close();
+$("viewRoster").onclick = () => {
+  const depts = [...new Set(people.map(p => p.department))].sort();
+  $("dlgBody").innerHTML = `<h2 style="margin-top:0">People</h2><div class="row"><input type="text" id="rf" placeholder="Filter by name, area or department" style="flex:1"><select id="rd" style="width:auto"><option value="">All departments</option>${depts.map(d => `<option>${esc(d)}</option>`).join("")}</select></div><div id="rl" class="small" style="max-height:60vh;overflow:auto;margin-top:8px"></div>`;
+  const draw = () => { const f = $("rf").value.toLowerCase(), d = $("rd").value;
+    $("rl").innerHTML = people.filter(p => (!d || p.department === d) && (!f || `${p.name} ${docText(p)}`.toLowerCase().includes(f))).slice(0, 400)
+      .map(p => `<div style="padding:4px 0;border-bottom:1px solid var(--line)"><span class="person-link" data-uid="${esc(p.uid)}">${esc(p.name)}</span> <span class="muted">${esc(p.department)}</span><div class="muted">${esc((p.areas||p.topics||[]).slice(0,4).join("; "))}</div></div>`).join(""); };
+  $("rf").oninput = draw; $("rd").onchange = draw; draw(); $("dlg").showModal();
+};
+
+loadRoster(); renderHistory();
+</script>
+</body>
+</html>
