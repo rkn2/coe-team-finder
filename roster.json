@@ -10222,28 +10222,7 @@
    "email": "jxl79@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Empirical study of input, output, outcome and impact of community-based rehabilitation stations"
-    },
-    {
-     "year": 2024,
-     "title": "Dynamic Cutting Properties of Miscanthus (giganteus) Stems Using an Impact Tester"
-    },
-    {
-     "year": 2024,
-     "title": "Harvesting Technologies and Costs for Switchgrass Production"
-    },
-    {
-     "year": 2024,
-     "title": "Power Requirement and Energy Consumption of Small Bale Recompression"
-    },
-    {
-     "year": 2023,
-     "title": "Case Study: Modeling a Grain Bin for Safe Entry Retrofit"
-    }
-   ],
+   "recent_papers": [],
    "research_source": "openalex (name match, unchecked)",
    "openalex": "https://openalex.org/A5091290282",
    "topics": [
@@ -10660,37 +10639,8 @@
    "email": "pdl103@arl.psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2023,
-     "title": "Effects of Foil Camber and Non-Zero Angle of Attack on The Unsteady Forces Produced by a Turbomachine Ingesting Turbulence"
-    },
-    {
-     "year": 2021,
-     "title": "Validation of a Simple Empirical Model for Calculating the Vibration of Flat Plates Excited by Incompressible Homogeneous Turbulent Boundary Layer Flow"
-    },
-    {
-     "year": 2019,
-     "title": "Impact of airfoil design uncertainty on the prediction of gust response"
-    },
-    {
-     "year": 2018,
-     "title": "Low Wavenumber Models for Turbulent Boundary Layer Excitation of Structures"
-    },
-    {
-     "year": 2017,
-     "title": "Modal forcing functions for structural vibration from turbulent boundary layer flow"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5077681096",
-   "topics": [
-    "Aerodynamics and Acoustics in Jet Flows",
-    "Fluid Dynamics and Turbulent Flows",
-    "Aeroelasticity and Vibration Control",
-    "Fluid Dynamics and Vibration Analysis",
-    "Turbomachinery Performance and Optimization"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -10789,37 +10739,8 @@
    "email": "cgm2@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Mammals of Eastern Old-Growth Forests in the United States"
-    },
-    {
-     "year": 2025,
-     "title": "Camera trap surveys reveal hidden mammalian diversity in rocky outcrops from southeastern Peruvian highlands"
-    },
-    {
-     "year": 2025,
-     "title": "Coexisting With Humans: Genomic and Behavioral Consequences in a Small and Isolated Bear Population"
-    },
-    {
-     "year": 2024,
-     "title": "Habitat Credit Program for Pollinators/Monarchs"
-    },
-    {
-     "year": 2023,
-     "title": "Differences in Eastern Chipmunk (Tamias striatus) Behavior between an Urbanized and a Forested Habitat in Central Pennsylvania"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5043548059",
-   "topics": [
-    "Wildlife Ecology and Conservation",
-    "Animal Ecology and Behavior Studies",
-    "Ecology and Vegetation Dynamics Studies",
-    "Wildlife-Road Interactions and Conservation",
-    "Avian ecology and behavior"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -11197,37 +11118,8 @@
    "email": "mlm6958@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2025,
-     "title": "Gaps in U.S. livestock data are a barrier to effective environmental and disease management"
-    },
-    {
-     "year": 2024,
-     "title": "PFAS in agroecosystems: Sources, impacts, and opportunities for mitigating risks to human and ecosystem health"
-    },
-    {
-     "year": 2023,
-     "title": "Fixed bed column experiments using cotton gin waste and walnut shells-derived biochar as low-cost solutions to removing pharmaceuticals from aqueous solutions"
-    },
-    {
-     "year": 2023,
-     "title": "Teaching introductory soil science before, during, and “after” the COVID‐19 pandemic"
-    },
-    {
-     "year": 2023,
-     "title": "Physicochemical Characterization of Biochar Derived From the Pyrolysis of Cotton Gin Waste and Walnut Shells"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5063601271",
-   "topics": [
-    "Pharmaceutical and Antibiotic Environmental Impacts",
-    "Effects and risks of endocrine disrupting chemicals",
-    "Wastewater Treatment and Reuse",
-    "Per- and polyfluoroalkyl substances research",
-    "Adsorption and biosorption for pollutant removal"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "sbv1"
    ]
@@ -11523,37 +11415,8 @@
    "email": "yzm5192@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Modeling Ostwald ripening dynamics in porous microstructures"
-    },
-    {
-     "year": 2026,
-     "title": "The Ganglion Network Model: Evolving Trapped Phases in Porous Media"
-    },
-    {
-     "year": 2026,
-     "title": "Ostwald Ripening in Underground Gas Storage"
-    },
-    {
-     "year": 2026,
-     "title": "Kinetic theory of multicomponent Ostwald ripening in porous media"
-    },
-    {
-     "year": 2026,
-     "title": "High-order multiscale preconditioner for elasticity of complex structures"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5065106888",
-   "topics": [
-    "Enhanced Oil Recovery Techniques",
-    "Advanced Mathematical Modeling in Engineering",
-    "Groundwater flow and contamination studies",
-    "CO2 Sequestration and Geologic Interactions",
-    "Heat and Mass Transfer in Porous Media"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -11605,37 +11468,8 @@
    "email": "sdm5500@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2025,
-     "title": "Broadband Discrimination or Structural Disparity? Investigating Socioeconomic and Urban Drivers of Broadband Inequality in Philadelphia"
-    },
-    {
-     "year": 2024,
-     "title": "New and Emerging Directions in the Fields of Antennas and Propagation"
-    },
-    {
-     "year": 2024,
-     "title": "Analyzing Broadband Reliability: Insights from Alaskan Arctic Communities"
-    },
-    {
-     "year": 2024,
-     "title": "Predicting the rate of adoption of the Affordable Connectivity Program (ACP) among eligible households: A diffusion model with panel data"
-    },
-    {
-     "year": 2022,
-     "title": "The national broadband rollout has a blind spot: Lack of accurate, transparent data about internet access speeds"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5045854235",
-   "topics": [
-    "ICT Impact and Policies",
-    "Social Media and Politics",
-    "Cognitive Radio Networks and Spectrum Sensing",
-    "Digitalization, Law, and Regulation",
-    "Legal Systems and Institutions"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -11806,37 +11640,8 @@
    "email": "ebm5351@psu.edu",
    "areas": [],
    "website": "https://sites.psu.edu/thsim/",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "High-Fidelity Multiphysics Modeling of the Molten Salt Fast Reactor with Applications for Reduced-Order Models"
-    },
-    {
-     "year": 2026,
-     "title": "Benchmarking of CFD modelling of a reactor vessel auxiliary cooling system (RVACS)"
-    },
-    {
-     "year": 2026,
-     "title": "Super-Resolution Initialization of High-Fidelity CFD Simulations for Pebble-Bed Reactors"
-    },
-    {
-     "year": 2026,
-     "title": "2026 Advances in NekRS for Nuclear Applications"
-    },
-    {
-     "year": 2026,
-     "title": "Coupled thermal-mechanical monitoring of an HTGR reactor vessel"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5046254414",
-   "topics": [
-    "Nuclear Engineering Thermal-Hydraulics",
-    "Fluid Dynamics and Turbulent Flows",
-    "Nuclear reactor physics and engineering",
-    "Heat transfer and supercritical fluids",
-    "Computational Fluid Dynamics and Aerodynamics"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "atm2",
     "sjl6054"
@@ -12238,37 +12043,8 @@
    "email": "sem2@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Tantalum Silicide Diffusion Barrier for Gold-Free Ohmic Contacts to AlGaN/GaN Heterostructures for Ultra-High Temperature Device Operation"
-    },
-    {
-     "year": 2026,
-     "title": "Thermal ALD-Grown TiS 2 Edge Contact for 2D Materials"
-    },
-    {
-     "year": 2026,
-     "title": "Scalable Edge Contacts to Two-dimensional Semiconductors"
-    },
-    {
-     "year": 2026,
-     "title": "GaN Digital IC Operating Up to 800 °C Temperature"
-    },
-    {
-     "year": 2026,
-     "title": "Surface Preparation and Its Impact on Contacts to AlN-rich AlGaN"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5028095303",
-   "topics": [
-    "Semiconductor materials and interfaces",
-    "GaN-based semiconductor devices and materials",
-    "Silicon Carbide Semiconductor Technologies",
-    "Semiconductor materials and devices",
-    "Advancements in Semiconductor Devices and Circuit Design"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "nuy12",
     "sud70",
@@ -12518,37 +12294,8 @@
    "email": "aim10@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2025,
-     "title": "The Interchangeable-Part Structure Of Food And Drug Law"
-    },
-    {
-     "year": 2021,
-     "title": "Food and Drug Regulation: Statutory and Regulatory Supplement"
-    },
-    {
-     "year": 2021,
-     "title": "Food and Drug Regulation: A Statutory Approach"
-    },
-    {
-     "year": 2016,
-     "title": "Uncertainty, Complexity, and Regulatory Design"
-    },
-    {
-     "year": 2013,
-     "title": "Jurisdictional Standards (and Rules)"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5016063519",
-   "topics": [
-    "Regulation and Compliance Studies",
-    "Administrative Law and Governance",
-    "Healthcare Regulation",
-    "Conflict of Laws and Jurisdiction",
-    "Legal and Constitutional Studies"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -12937,37 +12684,8 @@
    "email": "aan2@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Antarctica shallow-crustal and uppermost-mantle azimuthal-anisotropy model from ambient-noise Rayleigh-wave tomography"
-    },
-    {
-     "year": 2026,
-     "title": "Antarctica crust and uppermost-mantle shear-velocity and radial-anisotropy model from ambient-noise Rayleigh- and Love-wave tomography"
-    },
-    {
-     "year": 2026,
-     "title": "Moment Tensor Inversion Reveals Diverse Mechanisms for Icequakes in Ross Ice Shelf Rift WR4"
-    },
-    {
-     "year": 2026,
-     "title": "Assessing the feasibility of dense seismic networks in Southern California for recording primary and secondary sonic booms"
-    },
-    {
-     "year": 2025,
-     "title": "Seismic Evidence for Widespread Active Magmatism in Eastern Marie Byrd Land, Antarctica"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5017957257",
-   "topics": [
-    "Seismic Waves and Analysis",
-    "Geological and Geophysical Studies",
-    "High-pressure geophysics and materials",
-    "Seismic Imaging and Inversion Techniques",
-    "earthquake and tectonic studies"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "jmr41"
    ]
@@ -13309,25 +13027,8 @@
    "email": "mdp5748@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2025,
-     "title": "Advancing Medical Innovation: The Innovation Fellows Program for Training Early-Career Engineers and Scientists Advancing Novel Technologies"
-    },
-    {
-     "year": 2025,
-     "title": "Creating a Culture of Coachability: The Innovation Fellows Program for Mentoring Early-Career Engineers and Scientists in Entrepreneurship and Commercialization"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5119373466",
-   "topics": [
-    "Entrepreneurship Studies and Influences",
-    "Career Development and Diversity",
-    "Mentoring and Academic Development",
-    "Health and Medical Research Impacts",
-    "Biomedical and Engineering Education"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "rzr5557"
    ]
@@ -13340,37 +13041,8 @@
    "email": "dcp5303@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "An automated magnetron sputtering chamber for ferroelectric thin film deposition"
-    },
-    {
-     "year": 2026,
-     "title": "Microstructural influences on low-temperature grain-scale deformation behavior in an Fe-Ni alloy"
-    },
-    {
-     "year": 2026,
-     "title": "Probing the role of 3D intergranular interactions in local subcoercive switching of textured piezoelectric ceramics"
-    },
-    {
-     "year": 2026,
-     "title": "Microstructural strain distribution and plastic localization from grain boundary sliding activation in an FCC material"
-    },
-    {
-     "year": 2026,
-     "title": "Observing dwell fatigue stress redistribution in Ti-6Al-4V grain neighborhoods using high energy X-rays"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5037670779",
-   "topics": [
-    "Microstructure and mechanical properties",
-    "X-ray Diffraction in Crystallography",
-    "Additive Manufacturing Materials and Processes",
-    "Titanium Alloys Microstructure and Properties",
-    "High Temperature Alloys and Creep"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "ecd3",
     "mah37"
@@ -13436,37 +13108,8 @@
    "email": "tap103@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Addressing limitations in the aggregation of archival fatigue data for an additively manufactured titanium alloy"
-    },
-    {
-     "year": 2026,
-     "title": "Reduced low-temperature Charpy impact energy in additively manufactured duplex stainless steels"
-    },
-    {
-     "year": 2026,
-     "title": "Accurate measurement of porosity size and morphology in aluminium alloy laser welds"
-    },
-    {
-     "year": 2025,
-     "title": "Metals are key to the global economy — but three challenges threaten supply chains"
-    },
-    {
-     "year": 2025,
-     "title": "Contributions of sub-surface intergranular phases on fatigue crack initiation in additively manufactured austenitic stainless steel"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5068137068",
-   "topics": [
-    "Additive Manufacturing Materials and Processes",
-    "Welding Techniques and Residual Stresses",
-    "High Temperature Alloys and Creep",
-    "Microstructure and Mechanical Properties of Steels",
-    "Advanced Welding Techniques Analysis"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "axs18",
     "mxf36",
@@ -13481,37 +13124,8 @@
    "email": "dipanjan@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "The Rise of Structural Nanomedicine: A Conversation with Chad Mirkin"
-    },
-    {
-     "year": 2026,
-     "title": "Nano Borophene as a Programmable 2D Scaffold for Organized DNA Assembly and Long‐Range Energy Transfer"
-    },
-    {
-     "year": 2026,
-     "title": "Extrusion-printed silicone microarchitectures for geometry-controlled flow in lateral flow diagnostics and paper microfluidics"
-    },
-    {
-     "year": 2026,
-     "title": "Multiplex K-Edge Nanoprobe Imaging Enables 3D Volumetric Molecular Phenotyping of Human Hematoma Membranes"
-    },
-    {
-     "year": 2026,
-     "title": "Proteinized Surface Remodeling Decouples Environmental Stability from Intracellular Degradation in Oxidation-Prone 2D Nanoborophene"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5055819205",
-   "topics": [
-    "Nanoparticle-Based Drug Delivery",
-    "Nanoplatforms for cancer theranostics",
-    "RNA Interference and Gene Delivery",
-    "Cell Adhesion Molecules Research",
-    "Carbon and Quantum Dots Applications"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -13681,37 +13295,8 @@
    "email": "ljp149@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2020,
-     "title": "Identifying And Remediating Deficiencies In Problem Solving In Statics"
-    },
-    {
-     "year": 2020,
-     "title": "Improved Team Function: Student-Driven Team Rules and Consequences"
-    },
-    {
-     "year": 2020,
-     "title": "A Comparison Between The Engineering Mechanics Strength Of Materials Course In The Engineering, And Engineering Technology Programs At Penn State"
-    },
-    {
-     "year": 2020,
-     "title": "Sources Of Students’ Difficulties With Couples And Moments In Statics"
-    },
-    {
-     "year": 2020,
-     "title": "Improving Students’ Ability To Model During Problem Solving In Statics"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5020241669",
-   "topics": [
-    "Semiconductor materials and devices",
-    "Engineering Education and Pedagogy",
-    "Silicon Carbide Semiconductor Technologies",
-    "Integrated Circuits and Semiconductor Failure Analysis",
-    "Science Education and Pedagogy"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -13954,37 +13539,8 @@
    "email": "sjp12@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Chronic limb loading results in remarkable load carriage economy in growing fowl"
-    },
-    {
-     "year": 2026,
-     "title": "Supplementary material from \"Chronic limb loading results in remarkable load carriage economy in growing fowl\""
-    },
-    {
-     "year": 2026,
-     "title": "A K-means cluster analysis and histogram of the distance moved for animals using DeepLabCut video tracking software from Chronic limb loading results in remarkable load carriage economy in growing fowl"
-    },
-    {
-     "year": 2026,
-     "title": "Author response for \"Chronic limb loading results in remarkable load carriage economy in growing fowl\""
-    },
-    {
-     "year": 2026,
-     "title": "Author response for \"Chronic limb loading results in remarkable load carriage economy in growing fowl\""
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5055632756",
-   "topics": [
-    "Lower Extremity Biomechanics and Pathologies",
-    "Foot and Ankle Surgery",
-    "Knee injuries and reconstruction techniques",
-    "Tendon Structure and Treatment",
-    "Muscle activation and electromyography studies"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "huy25",
     "jzm14"
@@ -14014,37 +13570,8 @@
    "email": "avp11@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2023,
-     "title": "Growth of SrMoO3 thin films by suboxide molecular beam epitaxy"
-    },
-    {
-     "year": 2022,
-     "title": "Homogenization of Optical Field in Nanocrystal-Embedded Perovskite Composites"
-    },
-    {
-     "year": 2022,
-     "title": "Overcoming Shockley-Queisser limit using halide perovskite platform?"
-    },
-    {
-     "year": 2021,
-     "title": "Self-regulated growth of [111]-oriented perovskite oxide films using hybrid molecular beam epitaxy"
-    },
-    {
-     "year": 2021,
-     "title": "Homogenization of Optical Field in 'Plum Pudding'-Like Nanocrystal-Perovskite Composites"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5008665214",
-   "topics": [
-    "Phase-change materials and chalcogenides",
-    "Boron and Carbon Nanomaterials Research",
-    "Superconductivity in MgB2 and Alloys",
-    "Glass properties and applications",
-    "Laser Material Processing Techniques"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "dhw",
     "sfc5185"
@@ -14070,29 +13597,8 @@
    "email": "aop5398@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2024,
-     "title": "Visualizing fundamental engineering mathematics concepts through use of interactive viewports"
-    },
-    {
-     "year": 2020,
-     "title": "Aspiration-assisted bioprinting for precise positioning of biologics"
-    },
-    {
-     "year": 2018,
-     "title": "3D Printing of PDMS Improves Its Mechanical and Cell Adhesion Properties"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5028579206",
-   "topics": [
-    "Microfluidic and Capillary Electrophoresis Applications",
-    "3D Printing in Biomedical Research",
-    "Cellular Mechanics and Interactions",
-    "Additive Manufacturing and 3D Printing Technologies",
-    "Experimental Learning in Engineering"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "csd12",
     "ito1",
@@ -14153,37 +13659,8 @@
    "email": "heg12@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Supplemental information for \"Assessing Active and Passive Sampling Techniques for Emerging Contaminants Using Nested Watershed Monitoring\""
-    },
-    {
-     "year": 2026,
-     "title": "Hydrogeologic Drivers and Management Implications of PFAS, Nitrate, and Pharmaceuticals in Groundwater at a Karst Beneficial Reuse System"
-    },
-    {
-     "year": 2026,
-     "title": "Neonicotinoid and s‐triazine pesticide transport dynamics in a small karst agricultural watershed"
-    },
-    {
-     "year": 2026,
-     "title": "Assessing Active and Passive Sampling Techniques for Contaminants of Emerging Concern in a Nested Agricultural Watershed"
-    },
-    {
-     "year": 2025,
-     "title": "Wastewater surveillance of SARS-CoV-2 and influenza in a dynamic university community: understanding how wastewater measurements correspond to reported cases"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5058121058",
-   "topics": [
-    "Pharmaceutical and Antibiotic Environmental Impacts",
-    "Soil and Water Nutrient Dynamics",
-    "Pesticide and Herbicide Environmental Studies",
-    "Hydrology and Watershed Management Studies",
-    "Soil erosion and sediment transport"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "lxm500",
     "sbv1"
@@ -14278,37 +13755,8 @@
    "email": "map244@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2012,
-     "title": "Switching Costs in Key Account Relationships"
-    },
-    {
-     "year": 2010,
-     "title": "A system and method for auto-correction of first order lens distortion"
-    },
-    {
-     "year": 2010,
-     "title": "Laplacian based image fusion"
-    },
-    {
-     "year": 2009,
-     "title": "Biologically-inspired visible and infrared camera technology development"
-    },
-    {
-     "year": 2009,
-     "title": "Kalman filter based video background estimation"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5110451417",
-   "topics": [
-    "Advanced Image Fusion Techniques",
-    "Customer Service Quality and Loyalty",
-    "Infrared Target Detection Methodologies",
-    "Media and Digital Communication",
-    "Quality and Supply Management"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -14730,37 +14178,8 @@
    "email": "hor5062@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Evolution of Discrete Material Interfaces Fabricated via Multi-Material Laser Powder Bed Fusion"
-    },
-    {
-     "year": 2026,
-     "title": "Novel Reliability Assessment Methodology to Enable Acquisition Decisions that Improve Sustainment Reliability"
-    },
-    {
-     "year": 2024,
-     "title": "Dynamic Microstructure Evolution in Additive Friction Stir Deposition"
-    },
-    {
-     "year": 2023,
-     "title": "Viewpoint: Tuning the Martensitic Transformation Mode in Shape Memory Ceramics via Mesostructure and Microstructure Design"
-    },
-    {
-     "year": 2022,
-     "title": "Additive manufacturing of yttrium-stabilized tetragonal zirconia: Progressive wall collapse, martensitic transformation, and energy dissipation in micro-honeycombs"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5024797806",
-   "topics": [
-    "Advanced ceramic materials synthesis",
-    "Additive Manufacturing Materials and Processes",
-    "Advanced Welding Techniques Analysis",
-    "Shape Memory Alloy Transformations",
-    "Advanced Materials and Mechanics"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -15546,37 +14965,8 @@
    "email": "jms5532@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Laser sequence and build orientation govern interface quality in multi-material laser powder bed fusion"
-    },
-    {
-     "year": 2026,
-     "title": "Mechanical interlocking as a design-driven approach to strengthen multi-material laser powder bed fusion interface"
-    },
-    {
-     "year": 2026,
-     "title": "Advancing multi-material laser powder bed fusion through topology optimized design"
-    },
-    {
-     "year": 2026,
-     "title": "Nozzle clogging in cold spray of aluminum 6061 through 304 stainless steel split nozzles: Mechanisms, observations, and quantitative measurements"
-    },
-    {
-     "year": 2025,
-     "title": "Powder spreading behavior of bimodal ceramics in the binder jetting process"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5048038220",
-   "topics": [
-    "Additive Manufacturing Materials and Processes",
-    "High-Temperature Coating Behaviors",
-    "High-Velocity Impact and Material Behavior",
-    "Metal Forming Simulation Techniques",
-    "Structural Response to Dynamic Loads"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "gum53"
    ]
@@ -15606,37 +14996,8 @@
    "email": "fus191@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Cryogenic Characterization of Type-II Fiber Bragg Grating Sensors for High-Radiation Environments"
-    },
-    {
-     "year": 2026,
-     "title": "Radiation Sensitivity of P-Doped and Al-Doped Optical Fibers in the Visible Domain at Cryogenic Temperature"
-    },
-    {
-     "year": 2026,
-     "title": "Near-Infrared Radiation Tolerance of Anti-Resonant Hollow-Core Optical Fibers in a Nuclear Reactor Environment"
-    },
-    {
-     "year": 2025,
-     "title": "Coherent-Phase Optical Time Domain Reflectometry for Monitoring High-Temperature Superconducting Magnet Systems"
-    },
-    {
-     "year": 2025,
-     "title": "Rayleigh-backscattering interrogated optical fibers in HTS coils: effects of AC currents on optical fiber signals"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5073418379",
-   "topics": [
-    "Advanced Fiber Optic Sensors",
-    "Superconducting Materials and Applications",
-    "Photonic Crystal and Fiber Optics",
-    "Radiation Detection and Scintillator Technologies",
-    "Particle accelerators and beam dynamics"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "shk10",
     "sjl6054",
@@ -15764,37 +15125,8 @@
    "email": "avs6897@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Few-Shot Adaptation of Regime-Aware Models for Traffic Prediction Under Distribution Shift"
-    },
-    {
-     "year": 2025,
-     "title": "Enhancing short-term traffic prediction by integrating trends and fluctuations with attention mechanism"
-    },
-    {
-     "year": 2025,
-     "title": "Deep Learning–Based Spatial Translation of Traffic Prediction Using Newell’s Theory"
-    },
-    {
-     "year": 2024,
-     "title": "Evaluating the reliability of automatically generated pedestrian and bicycle crash surrogates"
-    },
-    {
-     "year": 2024,
-     "title": "A Bayesian approach to quantifying uncertainties and improving generalizability in traffic prediction models"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5051566747",
-   "topics": [
-    "Traffic control and management",
-    "Structural Engineering and Materials Analysis",
-    "Ultrasonics and Acoustic Wave Propagation",
-    "Traffic Prediction and Management Techniques",
-    "Infrastructure Maintenance and Monitoring"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "pxs990",
     "sig123",
@@ -15809,25 +15141,8 @@
    "email": "mus285@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2025,
-     "title": "Opportunities for Agricultural Plastics in Pennsylvania"
-    },
-    {
-     "year": 2023,
-     "title": "Recycling vs. Composting: When Knowledge is Important and Experience is Enough"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5093582206",
-   "topics": [
-    "Waste Management and Recycling",
-    "Polymer crystallization and properties",
-    "Microplastics and Plastic Pollution",
-    "Pro-Environmental Behavior and Attitudes",
-    "Municipal Solid Waste Management"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -15854,37 +15169,8 @@
    "email": "mxs232@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Nozzle clogging in cold spray of aluminum 6061 through 304 stainless steel split nozzles: Mechanisms, observations, and quantitative measurements"
-    },
-    {
-     "year": 2023,
-     "title": "Nickel Coatings on Ceramic Materials Using Different Diffusion Techniques"
-    },
-    {
-     "year": 2023,
-     "title": "Bioceramic composite coatings deposited by the cold spray process"
-    },
-    {
-     "year": 2022,
-     "title": "Prediction of the Flattening Ratio and Hardness of Cold Sprayed Deposits"
-    },
-    {
-     "year": 2021,
-     "title": "Deformation Behavior of Single Particle Cold Spray Ti-6Al-4V Splats"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5103419590",
-   "topics": [
-    "High-Temperature Coating Behaviors",
-    "Aluminum Alloy Microstructure Properties",
-    "Additive Manufacturing Materials and Processes",
-    "Surface Treatment and Coatings",
-    "Magnesium Alloys: Properties and Applications"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -16016,37 +15302,8 @@
    "email": "feifeishi@psu.edu",
    "areas": [],
    "website": "https://sites.psu.edu/feifeilab/",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Reveal Non‐Uniform Passivation on Lithium Metal Anode With Operando Spectroscopic Ellipsometry"
-    },
-    {
-     "year": 2026,
-     "title": "Influence of Soluble Stainless Steel Corrosion Products on the Electrical Double Layer in LiCl-KCl Molten Salts"
-    },
-    {
-     "year": 2026,
-     "title": "Understanding Solid Electrolyte Interphase and Interface Effect in Lithium Pitting Nucleation"
-    },
-    {
-     "year": 2026,
-     "title": "Operando monitoring of health and overcharge warning in lithium-ion battery with high-sensitivity, small-diameter optical fiber sensor"
-    },
-    {
-     "year": 2026,
-     "title": "Electrolytes for Fast-Charging Lithium-Ion Batteries with a Disordered Rock Salt Cathode"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5029869679",
-   "topics": [
-    "Advancements in Battery Materials",
-    "Advanced Battery Materials and Technologies",
-    "Battery Modeling and Management",
-    "Aqueous and Flow Batteries",
-    "Extraction and Separation Processes"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "huc24",
     "yan5018"
@@ -16674,37 +15931,8 @@
    "email": "sxs6879@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2024,
-     "title": "Low Profile Orthomode Full-Duplex Antenna for Wearable Biomedical Communication"
-    },
-    {
-     "year": 2023,
-     "title": "Effect of Dielectric Resonator (DR) Modes on RF-Magnetic Field"
-    },
-    {
-     "year": 2022,
-     "title": "A Versatile Shape Generation Method for 3D Meander-line Antennas"
-    },
-    {
-     "year": 2022,
-     "title": "Multifunctional Reconfigurable Spoof Surface Plasmon Polariton (SPP) Antenna"
-    },
-    {
-     "year": 2022,
-     "title": "Recent Progress on Full-duplex and Armband Textile Wearable Antennas"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5052082354",
-   "topics": [
-    "Antenna Design and Analysis",
-    "Advanced Antenna and Metasurface Technologies",
-    "Microwave Engineering and Waveguides",
-    "Antenna Design and Optimization",
-    "Electromagnetic Scattering and Analysis"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "dhw",
     "gxc27",
@@ -17205,37 +16433,8 @@
    "email": "mvs7249@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Bayesian Optimization of Crossbar-Based Compute-in-Memory System Design for Efficient DNN Inference"
-    },
-    {
-     "year": 2026,
-     "title": "Design of Integrated Voltage Regulators Using a Generative Waveform Surrogate"
-    },
-    {
-     "year": 2026,
-     "title": "Non-Uniform Channel Allocation in Multi-Fin GaN Tri-Gate Transistors for Package-Integrated Power Delivery"
-    },
-    {
-     "year": 2026,
-     "title": "Advanced Glass Package with Direct-Contact Copper Pillar and Monolithically Integrated Microfluidic Channels for 3D System Integration"
-    },
-    {
-     "year": 2026,
-     "title": "A Comprehensive Design Framework for Vertical Power Delivery in High-Performance Computing"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5085554167",
-   "topics": [
-    "Microwave Engineering and Waveguides",
-    "Electromagnetic Compatibility and Noise Suppression",
-    "3D IC and TSV technologies",
-    "Electromagnetic Simulation and Numerical Methods",
-    "Analog and Mixed-Signal Circuit Design"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -17274,37 +16473,8 @@
    "email": "bdt3@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Microsimulations of Emergency Evacuation in Rocky Mountain National Park Authors"
-    },
-    {
-     "year": 2026,
-     "title": "Visitor Perceptions of Reusable Foodware Implementation at Grand Canyon National Park: A Pilot Study for Messaging and Graphic Design Considerations"
-    },
-    {
-     "year": 2025,
-     "title": "Understanding Human Perception of Artificial Light at Night and Preferred Lighting Conditions in Parks and Protected Areas: A Pilot Study"
-    },
-    {
-     "year": 2025,
-     "title": "Integrating aircraft tracking, acoustic data, and surveys to evaluate park aircraft noise"
-    },
-    {
-     "year": 2025,
-     "title": "Understanding vehicle noise as an indicator of soundscape quality in Denali National Park and Preserve"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5078930345",
-   "topics": [
-    "Recreation, Leisure, Wilderness Management",
-    "American Environmental and Regional History",
-    "Diverse Aspects of Tourism Research",
-    "Urban Green Space and Health",
-    "Noise Effects and Management"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -17315,37 +16485,8 @@
    "email": "sst119@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Towards a parallel implementation of CPLEX using a pseudo-cost repository"
-    },
-    {
-     "year": 2025,
-     "title": "An Efficient Algorithm for the Estimation of a Mixture of Switching and Threshold Regressions"
-    },
-    {
-     "year": 2024,
-     "title": "Freight Gateway Consolidation for Purolator International Using Integer Programming"
-    },
-    {
-     "year": 2024,
-     "title": "Estimating Switch Points and Thresholds when the Dependent Variable is Not Observable"
-    },
-    {
-     "year": 2023,
-     "title": "Vaccine Allocation and Distribution: A Review with a Focus on Quantitative Methodologies and Application to Equity, Hesitancy, and COVID-19 Pandemic"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5025177602",
-   "topics": [
-    "Vehicle Routing Optimization Methods",
-    "Complexity and Algorithms in Graphs",
-    "Advanced Optimization Algorithms Research",
-    "Facility Location and Emergency Management",
-    "Advanced Statistical Methods and Models"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -17456,37 +16597,8 @@
    "email": "mut11@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Self-powered near-infrared photodiode based on a MoSe2/MoS2 heterojunction"
-    },
-    {
-     "year": 2026,
-     "title": "Synthesis, ink formulation, and aerosol jet printing of (Nb0.5Ta0.5)S2 ternary alloy for additively manufactured electrochemical supercapacitors"
-    },
-    {
-     "year": 2026,
-     "title": "Vanadium doping induced valley asymmetries in WS$_2$ monolayers"
-    },
-    {
-     "year": 2026,
-     "title": "Straintronics and Twistronics in 2D Materials: Structural Control and Predictive Design"
-    },
-    {
-     "year": 2026,
-     "title": "Autonomous Multi‐Objective Nanoscale Characterization of Combinatorial (Al, Sc, B)N Films Reveals Composition‐Dependent Ferroelectric Regimes"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5069865883",
-   "topics": [
-    "Graphene research and applications",
-    "Carbon Nanotubes in Composites",
-    "2D Materials and Applications",
-    "Boron and Carbon Nanomaterials Research",
-    "Transition Metal Oxide Nanomaterials"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "bzr52",
     "mah37",
@@ -17558,37 +16670,8 @@
    "email": "",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2020,
-     "title": "Task Force Climate Change: A Patron Saint of Lost Causes, or Just Ahead of Its Time?"
-    },
-    {
-     "year": 2019,
-     "title": "The nuclear option"
-    },
-    {
-     "year": 2018,
-     "title": "Why hurricane forecasters can’t ‘politicize’ storm warnings even if they wanted to"
-    },
-    {
-     "year": 2018,
-     "title": "Mission Melting Arctic: The Effects of a Changing Climate on Maritime Security"
-    },
-    {
-     "year": 2017,
-     "title": "Why is climate change’s 2 degrees Celsius of warming limit so important?"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5063319565",
-   "topics": [
-    "Meteorological Phenomena and Simulations",
-    "Tropical and Extratropical Cyclones Research",
-    "Arctic and Russian Policy Studies",
-    "Maritime Security and History",
-    "Oceanographic and Atmospheric Processes"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -17686,37 +16769,8 @@
    "email": "set1@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Samples and Characterizations for An Automated Magnetron Sputtering Chamber for Ferroelectric Thin Film Deposition"
-    },
-    {
-     "year": 2026,
-     "title": "An automated magnetron sputtering chamber for ferroelectric thin film deposition"
-    },
-    {
-     "year": 2026,
-     "title": "Heterogeneous ferroelectricity and conductivity of oxidized BaTiO 3 crystals: Role of nanoscale phase segregation in the surface region"
-    },
-    {
-     "year": 2026,
-     "title": "Metal–Organic Chemical Vapor Deposition of MgGeN 2 –AlN Alloy Thin Films"
-    },
-    {
-     "year": 2026,
-     "title": "Ferroelectric Switching in ZnO/Zn1-xMgxO Heterostructures: Atomistic Insights into Interfacial Coupling and Layer Architecture"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5032028141",
-   "topics": [
-    "Ferroelectric and Piezoelectric Materials",
-    "Multiferroics and related materials",
-    "Dielectric materials and actuators",
-    "Ferroelectric and Negative Capacitance Devices",
-    "Advanced MEMS and NEMS Technologies"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "acv13",
     "bzr52",
@@ -17736,25 +16790,8 @@
    "email": "hrt5107@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2024,
-     "title": "Visualizing fundamental engineering mathematics concepts through use of interactive viewports"
-    },
-    {
-     "year": 2011,
-     "title": "Evaluation of Low- and Medium-Carbon Nb-Microalloyed Plate Steels for Wind Tower Applications"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5054327438",
-   "topics": [
-    "Microstructure and Mechanical Properties of Steels",
-    "High Temperature Alloys and Creep",
-    "Experimental Learning in Engineering",
-    "Engineering Education and Pedagogy",
-    "Material Properties and Failure Mechanisms"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -17765,37 +16802,8 @@
    "email": "vqt5094@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Beats of multiple tones applied to multirotor aircraft"
-    },
-    {
-     "year": 2026,
-     "title": "Noise Control via Synchrophasing for a Fixed-Wing Distributed Electric Propulsion Aircraft in Free Flight"
-    },
-    {
-     "year": 2026,
-     "title": "Beating effects in multirotor electric aircraft noise"
-    },
-    {
-     "year": 2025,
-     "title": "Beats of rotor broadband noise modulation in unmanned aerial vehicles"
-    },
-    {
-     "year": 2025,
-     "title": "An Experimental Evaluation of an Electronic Rotor Phase Synchronization System for Multirotor Aircraft Noise Control"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5104136195",
-   "topics": [
-    "Aerodynamics and Acoustics in Jet Flows",
-    "Vehicle Noise and Vibration Control",
-    "Robotic Mechanisms and Dynamics",
-    "Aeroelasticity and Vibration Control",
-    "Dynamics and Control of Mechanical Systems"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "enj4",
     "evg5332",
@@ -17813,37 +16821,8 @@
    "email": "auu1@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Comparison of 2 Forms of Pulsatility: A Critical Perspective on Perfusion Modalities"
-    },
-    {
-     "year": 2026,
-     "title": "Randomized Clinical Trial Comparing Effects of Pulsatile vs Nonpulsatile Cardiopulmonary Bypass on Neurologic Outcomes"
-    },
-    {
-     "year": 2026,
-     "title": "Unplanned Readmissions due to Pleural Effusion Following the Fontan Operation"
-    },
-    {
-     "year": 2026,
-     "title": "Three Decades of Evidence on Pulsatile Cardiopulmonary Bypass in Pediatrics: No Significant Clinical Benefit"
-    },
-    {
-     "year": 2026,
-     "title": "Highlights of the Nineteenth International Conference on Pediatric Mechanical Circulatory Support Systems and Pediatric Cardiopulmonary Perfusion"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5109972511",
-   "topics": [
-    "Mechanical Circulatory Support Devices",
-    "Congenital Heart Disease Studies",
-    "Cardiac and Coronary Surgery Techniques",
-    "Transplantation: Methods and Outcomes",
-    "Respiratory Support and Mechanisms"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -18086,37 +17065,8 @@
    "email": "ruv12@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Synthesis of Biographite from Starch Biomass Using Additive Assisted Templating Approach"
-    },
-    {
-     "year": 2026,
-     "title": "Carbon-Catalysed Carbon Deposition via Hydrocarbon Cracking"
-    },
-    {
-     "year": 2026,
-     "title": "Hemp-Derived Graphene-like Materials: A Renewable Pathway Toward Scalable Conductive Carbon Nanomaterials"
-    },
-    {
-     "year": 2026,
-     "title": "Upcycling PET plastic waste: A graphenic additive templated approach to synthetic graphite"
-    },
-    {
-     "year": 2025,
-     "title": "Sustainable Development of High-Performance Graphitic Carbon for Lithium-Ion Batteries Utilizing Seed Oil"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5091297727",
-   "topics": [
-    "Advanced Combustion Engine Technologies",
-    "Graphite, nuclear technology, radiation studies",
-    "Atmospheric chemistry and aerosols",
-    "Graphene research and applications",
-    "Carbon Nanotubes in Composites"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "acv13",
     "mzk13"
@@ -18324,37 +17274,8 @@
    "email": "smv11@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "AI Writing Tools Empower Engineering Academic Research Reports"
-    },
-    {
-     "year": 2026,
-     "title": "National Culture and AI Knowledge Flow: An Empirical Study"
-    },
-    {
-     "year": 2026,
-     "title": "How Commute Dissonance and Perceived Alternatives Shape Commute Satisfaction"
-    },
-    {
-     "year": 2025,
-     "title": "AI-Assisted Grading – A Study on Efficiency and Fairness"
-    },
-    {
-     "year": 2025,
-     "title": "A Comparative Analysis of Primavera P6 and Industry Alternatives for Construction Management and Scheduling"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5027146947",
-   "topics": [
-    "Artificial Intelligence in Education",
-    "Construction Project Management and Performance",
-    "Artificial Intelligence in Healthcare and Education",
-    "Engineering Education and Curriculum Development",
-    "Civil and Structural Engineering Research"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -18453,37 +17374,8 @@
    "email": "nav5000@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Determination of Unsteady Lift Spatial Distributions Using Non-Dimensional Scaling Optimization"
-    },
-    {
-     "year": 2026,
-     "title": "Experimental and numerical analysis methods for improved material characterization using a standing wave impedance tube: Demonstration on experimental data"
-    },
-    {
-     "year": 2026,
-     "title": "Radiated sound analysis of acoustic black holes for interior noise reduction"
-    },
-    {
-     "year": 2026,
-     "title": "Computational Performance Analysis of Impact Dampers in Vibration Control of eVTOL Booms"
-    },
-    {
-     "year": 2026,
-     "title": "Spatial Unsteady Lift Distribution Estimation using Non-Dimensional Scaling Optimization"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5090161433",
-   "topics": [
-    "Vibration and Dynamic Analysis",
-    "Aeroelasticity and Vibration Control",
-    "Scientific Measurement and Uncertainty Evaluation",
-    "Gear and Bearing Dynamics Analysis",
-    "Advanced Measurement and Metrology Techniques"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -19225,37 +18117,8 @@
    "email": "axw274@arl.psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "A quantum approach for vortex shedding induced vibrations"
-    },
-    {
-     "year": 2025,
-     "title": "Modeling a tunable plate in a leaky wave antenna"
-    },
-    {
-     "year": 2025,
-     "title": "Interface reduced substructuring using polynomials for non-smooth line-like interfaces"
-    },
-    {
-     "year": 2025,
-     "title": "Modeling active response in a leady wave antenna"
-    },
-    {
-     "year": 2025,
-     "title": "Subproblem optimization for constrained layer damping for a panel"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5040333316",
-   "topics": [
-    "Model Reduction and Neural Networks",
-    "Probabilistic and Robust Engineering Design",
-    "Acoustic Wave Phenomena Research",
-    "Aeroelasticity and Vibration Control",
-    "Advanced Numerical Methods in Computational Mathematics"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "dmw72"
    ]
@@ -19996,19 +18859,8 @@
    "email": "jqy5673@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Phase stability and mechanical response of Ag-interlayered Al/Cu resistance spot-welded joints"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5151165799",
-   "topics": [
-    "Electronic Packaging and Soldering Technologies",
-    "Advanced Welding Techniques Analysis",
-    "Welding Techniques and Residual Stresses"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {
@@ -20062,37 +18914,8 @@
    "email": "huy1@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Mechanisms underlying the defective development of xyloglucan-deficient root hairs in Arabidopsis thaliana"
-    },
-    {
-     "year": 2026,
-     "title": "Energy Performance Evaluation and Indoor Environmental Quality Study of a Home Renovated Using Hempcrete"
-    },
-    {
-     "year": 2026,
-     "title": "Editorial: Exploring hempcrete's potential: mechanical properties and sustainable building practices"
-    },
-    {
-     "year": 2026,
-     "title": "Measurement and characterization of pressure and temperature of the biomass during pelletization process"
-    },
-    {
-     "year": 2025,
-     "title": "Mechanics of plant epidermal cell wall: effect of anisotropic alignment of cellulose microfibrils in the junction region"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5035535094",
-   "topics": [
-    "Stability and Control of Uncertain Systems",
-    "Fuzzy Logic and Control Systems",
-    "Concrete and Cement Materials Research",
-    "Advanced Control Systems Design",
-    "Agricultural Engineering and Mechanization"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "amm7",
     "jmc6",
@@ -20262,37 +19085,8 @@
    "email": "may106@psu.edu",
    "areas": [],
    "website": "",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Developing novel hybrid reefs to provide both wave energy reduction and opportunities for ecological restoration"
-    },
-    {
-     "year": 2025,
-     "title": "Designing modular, artificial reefs for both coastal defense and coral restoration"
-    },
-    {
-     "year": 2024,
-     "title": "Powering Policy for Trains with Hybrid Locomotive Consists"
-    },
-    {
-     "year": 2023,
-     "title": "Route-Based Energy Analysis of Hybrid Rail Consists"
-    },
-    {
-     "year": 2023,
-     "title": "Route Based Fuel Savings of Freight Train Hybridization"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5054323217",
-   "topics": [
-    "Advanced Multi-Objective Optimization Algorithms",
-    "Systems Engineering Methodologies and Applications",
-    "Cellular and Composite Structures",
-    "Product Development and Customization",
-    "Design Education and Practice"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "cdr10",
     "gpw1"
@@ -20454,19 +19248,8 @@
    "email": "jkz5660@psu.edu",
    "areas": [],
    "website": "https://sites.psu.edu/jiezhang/",
-   "recent_papers": [
-    {
-     "year": 2001,
-     "title": "Genetic factors in the etiology and potential management of inflammatory bowel disease"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5046089231",
-   "topics": [
-    "Inflammatory Bowel Disease",
-    "Genetic Associations and Epidemiology",
-    "Ocular Diseases and Behçet’s Syndrome"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": [
     "mtk2"
    ]
@@ -20662,37 +19445,8 @@
    "email": "ruobo.zhou@psu.edu",
    "areas": [],
    "website": "https://www.thezhoulab.org/",
-   "recent_papers": [
-    {
-     "year": 2026,
-     "title": "Tunable Chemical and Optical Modulation of ER-Plasma Membrane Contact-Site Geometry, Dynamics, and Protein Recruitment with High-Fidelity Visualization"
-    },
-    {
-     "year": 2026,
-     "title": "Dataset for \"Tunable Chemical and Optical Modulation of ER-Plasma Membrane Contact-Site Geometry, Dynamics, and Protein Recruitment with High-Fidelity Visualization\""
-    },
-    {
-     "year": 2026,
-     "title": "A Tunable CTD Grammar Governs the Spatial Programming of the Transcription Cycle"
-    },
-    {
-     "year": 2026,
-     "title": "A tunable CTD grammar governs the spatial programming of the transcription cycle"
-    },
-    {
-     "year": 2026,
-     "title": "CLaSSiNet: A Computational Framework for High-Resolution Classification and Spatial Mapping of Heterogeneous Biological Network Architectures"
-    }
-   ],
-   "research_source": "openalex (name match, unchecked)",
-   "openalex": "https://openalex.org/A5001730296",
-   "topics": [
-    "Advanced Fluorescence Microscopy Techniques",
-    "Force Microscopy Techniques and Applications",
-    "Cellular Mechanics and Interactions",
-    "DNA Repair Mechanisms",
-    "Diffusion and Search Dynamics"
-   ],
+   "recent_papers": [],
+   "research_source": "",
    "coauthors": []
   },
   {

@@ -745,8 +745,8 @@
   "uid": "pdl103",
   "name": "Peter Lysak",
   "department": "Applied Research Laboratory",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5077681096"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "xmm5107",
@@ -766,8 +766,8 @@
   "uid": "cgm2",
   "name": "Carolyn Mahan",
   "department": "Penn State Altoona",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5043548059"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "fsm5098",
@@ -781,9 +781,7 @@
   "name": "Michael Manahan",
   "department": "Mechanical Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5056943168"
-  ]
+  "candidates": []
  },
  {
   "uid": "ssm16",
@@ -796,83 +794,71 @@
   "uid": "mlm6958",
   "name": "Michael Mashtare",
   "department": "Agricultural and Biological Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5063601271"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "yzm5192",
   "name": "Yashar Mehmani",
   "department": "College of Earth and Mineral Sciences",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5065106888"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "sdm5500",
   "name": "Sascha Meinrath",
   "department": "Bellisario College of Communications",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5045854235"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "ahm5321",
   "name": "Anne Menefee",
   "department": "Civil and Environmental Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5013848603",
-   "https://openalex.org/A5163040772"
-  ]
+  "candidates": []
  },
  {
   "uid": "ebm5351",
   "name": "Elia Merzari",
   "department": "Nuclear Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5046254414"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "rjm150",
   "name": "Richard Meyer, Jr.",
   "department": "Acoustics",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5071594959"
-  ]
+  "candidates": []
  },
  {
   "uid": "jhm104",
   "name": "Judd Michael",
   "department": "Agricultural and Biological Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5006496881",
-   "https://openalex.org/A5049798071",
-   "https://openalex.org/A5137064562"
-  ]
+  "candidates": []
  },
  {
   "uid": "sem2",
   "name": "Suzanne Mohney",
   "department": "School of Electrical Engineering and Computer Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5028095303"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "aim10",
   "name": "Adam Muchmore",
   "department": "Penn State Law",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5016063519"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "bxm437",
   "name": "Bhaskar Mukherjee",
   "department": "Aerospace Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5153560038",
-   "https://openalex.org/A5157235317"
-  ]
+  "candidates": []
  },
  {
   "uid": "mzm269",
@@ -892,45 +878,43 @@
   "uid": "aan2",
   "name": "Andrew Nyblade",
   "department": "Acoustics",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5017957257"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "mdp5748",
   "name": "Mark Pacey",
   "department": "Biomedical Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5119373466"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "dcp5303",
   "name": "Darren Pagan",
   "department": "College of Earth and Mineral Sciences",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5037670779"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "tap103",
   "name": "Todd Palmer",
   "department": "Engineering Science and Mechanics",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5068137068"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "dfp5170",
   "name": "Dipanjan Pan",
   "department": "Nuclear Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5055819205"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "fpp5057",
   "name": "Femeena Pandara Valappil",
   "department": "Agricultural and Biological Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5005073535"
-  ]
+  "candidates": []
  },
  {
   "uid": "mbp6011",
@@ -943,61 +927,57 @@
   "uid": "ljp149",
   "name": "Lucas Passmore",
   "department": "Engineering Science and Mechanics",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5020241669"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "sjp12",
   "name": "Stephen Piazza",
   "department": "Mechanical Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5055632756"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "avp11",
   "name": "Alexej Pogrebnyakov",
   "department": "School of Electrical Engineering and Computer Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5008665214"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "nzp5479",
   "name": "Nandhakumar Ponnusamy",
   "department": "Nuclear Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5060479837"
-  ]
+  "candidates": []
  },
  {
   "uid": "aop5398",
   "name": "Adomas Povilianskas",
   "department": "Engineering Science and Mechanics",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5028579206"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "heg12",
   "name": "Heather Preisendanz",
   "department": "Agricultural and Biological Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5058121058"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "map244",
   "name": "Michael Pusateri",
   "department": "School of Electrical Engineering and Computer Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5110451417"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "gxq102",
   "name": "Guanghua Qiu",
   "department": "Industrial and Manufacturing Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5028404393"
-  ]
+  "candidates": []
  },
  {
   "uid": "amr9652",
@@ -1011,11 +991,7 @@
   "name": "Ramakrishnan Rajagopalan",
   "department": "Materials Research Lab",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5057871349",
-   "https://openalex.org/A5108758720",
-   "https://openalex.org/A5136215116"
-  ]
+  "candidates": []
  },
  {
   "uid": "szr252",
@@ -1028,32 +1004,22 @@
   "uid": "hor5062",
   "name": "Hunter Rauch",
   "department": "Applied Research Laboratory",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5024797806"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "ewr101",
   "name": "Edward Reutzel",
   "department": "Applied Research Laboratory",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5089837205",
-   "https://openalex.org/A5023802568",
-   "https://openalex.org/A5052052867"
-  ]
+  "candidates": []
  },
  {
   "uid": "jar403",
   "name": "Joshua Robinson",
   "department": "College of Earth and Mineral Sciences",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5084800356",
-   "https://openalex.org/A5126584848",
-   "https://openalex.org/A5069161174",
-   "https://openalex.org/A5126362769",
-   "https://openalex.org/A5012286030"
-  ]
+  "candidates": []
  },
  {
   "uid": "ser41",
@@ -1094,43 +1060,43 @@
   "uid": "jms5532",
   "name": "Jeremy Schreiber",
   "department": "Applied Research Laboratory",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5048038220"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "fus191",
   "name": "Federico Scurti",
   "department": "Nuclear Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5073418379"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "avs6897",
   "name": "Agnimitra Sengupta",
   "department": "Larson Transportation Institute",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5051566747"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "mus285",
   "name": "Maryam Shahri",
   "department": "Agricultural and Biological Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5093582206"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "mxs232",
   "name": "Mala Sharma",
   "department": "Applied Research Laboratory",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5103419590"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "fzs5183",
   "name": "Feifei Shi",
   "department": "College of Earth and Mineral Sciences",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5029869679"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "mxs7381",
@@ -1144,20 +1110,14 @@
   "name": "Jogender Singh",
   "department": "Applied Research Laboratory",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5101498431",
-   "https://openalex.org/A5149990382"
-  ]
+  "candidates": []
  },
  {
   "uid": "cms561",
   "name": "Chad Smith",
   "department": "Applied Research Laboratory",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5103429879",
-   "https://openalex.org/A5086189954"
-  ]
+  "candidates": []
  },
  {
   "uid": "scs6075",
@@ -1170,25 +1130,22 @@
   "uid": "sxs6879",
   "name": "Saber Soltani",
   "department": "School of Electrical Engineering and Computer Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5052082354"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "ybs5190",
   "name": "Ying Sun",
   "department": "School of Electrical Engineering and Computer Science",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5100672752",
-   "https://openalex.org/A5158694978"
-  ]
+  "candidates": []
  },
  {
   "uid": "mvs7249",
   "name": "Madhavan Swaminathan",
   "department": "School of Electrical Engineering and Computer Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5085554167"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "dcs5",
@@ -1201,73 +1158,71 @@
   "uid": "bdt3",
   "name": "Brendan Taff",
   "department": "Recreation, Park & Tourism Management",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5078930345"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "sst119",
   "name": "Srinivas Subramanya Tamvada",
   "department": "Industrial and Manufacturing Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5025177602"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "mut11",
   "name": "Mauricio Terrones",
   "department": "Eberly College of Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5069865883"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "dwt12",
   "name": "David Titley",
   "department": "School of International Affairs",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5063319565"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "set1",
   "name": "Susan Trolier-McKinstry",
   "department": "School of Electrical Engineering and Computer Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5032028141"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "hrt5107",
   "name": "Henrietta Tsosie",
   "department": "Engineering Science and Mechanics",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5054327438"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "vqt5094",
   "name": "Vitor Tumelero Valente",
   "department": "Aerospace Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5104136195"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "auu1",
   "name": "Akif Undar",
   "department": "College of Medicine",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5109972511"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "ruv12",
   "name": "Randy Vander Wal",
   "department": "Mechanical Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5091297727"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "jpv5237",
   "name": "Juliana Vasco-Correa",
   "department": "Agricultural and Biological Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5076045411"
-  ]
+  "candidates": []
  },
  {
   "uid": "acv",
@@ -1280,135 +1235,105 @@
   "uid": "smv11",
   "name": "Sofia Vidalis",
   "department": "Larson Transportation Institute",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5027146947"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "nav5000",
   "name": "Nicholas Vlajic",
   "department": "Applied Research Laboratory",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5090161433"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "mdw18",
   "name": "Mort Webster",
   "department": "College of Earth and Mineral Sciences",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5054436824",
-   "https://openalex.org/A5161385814"
-  ]
+  "candidates": []
  },
  {
   "uid": "axw274",
   "name": "Andrew Wixom",
   "department": "Applied Research Laboratory",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5040333316"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "dew125",
   "name": "Douglas Wolfe",
   "department": "Materials Science and Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5102880795",
-   "https://openalex.org/A5007369487",
-   "https://openalex.org/A5103935131",
-   "https://openalex.org/A5138350678",
-   "https://openalex.org/A5135414769"
-  ]
+  "candidates": []
  },
  {
   "uid": "jkx5175",
   "name": "Jun Xu",
   "department": "Mechanical Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5134855922"
-  ]
+  "candidates": []
  },
  {
   "uid": "qxy1",
   "name": "Qing Yang",
   "department": "College of Medicine",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5101843283",
-   "https://openalex.org/A5100826201",
-   "https://openalex.org/A5109506263",
-   "https://openalex.org/A5121331424",
-   "https://openalex.org/A5152645795"
-  ]
+  "candidates": []
  },
  {
   "uid": "jqy5673",
   "name": "Jiahui Ye",
   "department": "Industrial and Manufacturing Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5151165799"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "huy1",
   "name": "Hojae Yi",
   "department": "Agricultural and Biological Engineering",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5035535094"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "may106",
   "name": "Michael Yukish",
   "department": "Applied Research Laboratory",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5054323217"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "cuz138",
   "name": "Cheng Zhang",
   "department": "Larson Transportation Institute",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5085059400",
-   "https://openalex.org/A5113969513",
-   "https://openalex.org/A5162421352"
-  ]
+  "candidates": []
  },
  {
   "uid": "jxz19",
   "name": "Jianhua Zhang",
   "department": "Aerospace Engineering",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5010501357",
-   "https://openalex.org/A5161350441"
-  ]
+  "candidates": []
  },
  {
   "uid": "jkz5660",
   "name": "Jie Zhang",
   "department": "School of Electrical Engineering and Computer Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5046089231"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  },
  {
   "uid": "yzz130",
   "name": "Yu Zhang",
   "department": "Larson Transportation Institute",
   "issue": "no research areas, no publications, no unique OpenAlex match",
-  "candidates": [
-   "https://openalex.org/A5100731869",
-   "https://openalex.org/A5038357504",
-   "https://openalex.org/A5160593255",
-   "https://openalex.org/A5028365484",
-   "https://openalex.org/A5101944352"
-  ]
+  "candidates": []
  },
  {
   "uid": "rkz5110",
   "name": "Ruobo Zhou",
   "department": "Eberly College of Science",
-  "issue": "research filled from OpenAlex by name; check it is the right person",
-  "openalex": "https://openalex.org/A5001730296"
+  "issue": "no research areas, no publications, no unique OpenAlex match",
+  "candidates": []
  }
 ]
