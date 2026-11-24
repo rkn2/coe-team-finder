@@ -1195,8 +1195,8 @@
     "Additive Manufacturing Materials and Processes",
     "High Temperature Alloys and Creep",
     "Microstructure and Mechanical Properties of Steels",
-    "Microstructure and mechanical properties",
-    "Cellular and Composite Structures"
+    "Cellular and Composite Structures",
+    "Microstructure and mechanical properties"
    ],
    "coauthors": [
     "bdv5051",
@@ -4239,9 +4239,9 @@
    "topics": [
     "Material Dynamics and Properties",
     "Advanced Battery Materials and Technologies",
-    "Polymer crystallization and properties",
     "Vibration Control and Rheological Fluids",
-    "Epoxy Resin Curing Processes"
+    "Epoxy Resin Curing Processes",
+    "Membrane Separation and Gas Transport"
    ],
    "coauthors": []
   },
@@ -7653,8 +7653,8 @@
     "Ultrasonics and Acoustic Wave Propagation",
     "Non-Destructive Testing Techniques",
     "Carbon Nanotubes in Composites",
-    "Photopolymerization techniques and applications",
-    "Structural Health Monitoring Techniques"
+    "Flow Measurement and Analysis",
+    "Photopolymerization techniques and applications"
    ],
    "coauthors": []
   },
@@ -8233,7 +8233,7 @@
     "Ultrasonics and Acoustic Wave Propagation",
     "Metamaterials and Metasurfaces Applications",
     "Gas Dynamics and Kinetic Theory",
-    "Cellular and Composite Structures"
+    "Computational Fluid Dynamics and Aerodynamics"
    ],
    "coauthors": []
   },
@@ -9487,7 +9487,7 @@
     "Engineering Education and Curriculum Development",
     "Entrepreneurship Studies and Influences",
     "Educational Technology and Assessment",
-    "Career Development and Diversity"
+    "Biomedical and Engineering Education"
    ],
    "coauthors": []
   },
@@ -9666,7 +9666,7 @@
     "Direction-of-Arrival Estimation Techniques",
     "Advanced Wireless Communication Techniques",
     "Fluid Dynamics and Turbulent Flows",
-    "Reproductive Health and Contraception"
+    "Ultrasonics and Acoustic Wave Propagation"
    ],
    "coauthors": [
     "cfa5361",
@@ -21220,7 +21220,7 @@
     "Advanced Antenna and Metasurface Technologies",
     "Microwave Engineering and Waveguides",
     "Antenna Design and Optimization",
-    "Electromagnetic Scattering and Analysis"
+    "Full-Duplex Wireless Communications"
    ],
    "coauthors": [
     "dhw",
@@ -22465,15 +22465,15 @@
    "recent_papers": [
     {
      "year": 2026,
+     "title": "Heterogeneous ferroelectricity and conductivity of oxidized BaTiO 3 crystals: Role of nanoscale phase segregation in the surface region"
+    },
+    {
+     "year": 2026,
      "title": "Samples and Characterizations for An Automated Magnetron Sputtering Chamber for Ferroelectric Thin Film Deposition"
     },
     {
      "year": 2026,
      "title": "An automated magnetron sputtering chamber for ferroelectric thin film deposition"
-    },
-    {
-     "year": 2026,
-     "title": "Heterogeneous ferroelectricity and conductivity of oxidized BaTiO 3 crystals: Role of nanoscale phase segregation in the surface region"
     },
     {
      "year": 2026,
@@ -23231,8 +23231,8 @@
     "Artificial Intelligence in Education",
     "Construction Project Management and Performance",
     "Artificial Intelligence in Healthcare and Education",
-    "Engineering Education and Curriculum Development",
-    "Civil and Structural Engineering Research"
+    "Engineering Education and Pedagogy",
+    "Engineering Education and Curriculum Development"
    ],
    "coauthors": []
   },
@@ -23407,8 +23407,8 @@
    "openalex": "https://openalex.org/A5090161433",
    "topics": [
     "Vibration and Dynamic Analysis",
-    "Aeroelasticity and Vibration Control",
     "Scientific Measurement and Uncertainty Evaluation",
+    "Aeroelasticity and Vibration Control",
     "Gear and Bearing Dynamics Analysis",
     "Advanced Measurement and Metrology Techniques"
    ],
@@ -33845,7 +33845,7 @@
   {
    "a": "ncb5048",
    "b": "rls5008",
-   "papers": 10
+   "papers": 11
   },
   {
    "a": "ncb5048",
