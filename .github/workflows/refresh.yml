@@ -19,6 +19,7 @@ jobs:
       - name: Build roster
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          RMD_API_KEY: ${{ secrets.RMD_API_KEY }}
         run: python3 build_roster.py --cache "$RUNNER_TEMP/cache" --refresh
       - name: Commit if changed
         run: |

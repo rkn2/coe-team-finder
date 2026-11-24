@@ -3,12 +3,15 @@
 
 1. The college Faculty & Staff Directory (engr.psu.edu/directory), class = Faculty.
 2. Each person's directory profile: research areas, research website, recent publications.
-3. OpenAlex, only for people whose profile has no research areas and no publications.
+3. The Libraries' Researcher Metadata Database (RMD), when an API key is available: publications
+   since 2016 with Penn State co-author IDs and Pure topic tags. RMD publications replace the
+   profile list for anyone RMD has, and its co-author IDs give exact co-author links.
+4. OpenAlex, only for people with no research areas and no publications from either source.
 
 Raw pages are cached on the data drive. Usage:
     python3 build_roster.py [--cache DIR] [--refresh]
 """
-import argparse, html, json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
+import argparse, html, json, os, re, socket, sys, time, unicodedata, urllib.parse, urllib.request
 from collections import Counter, defaultdict
 
 BASE = "https://www.engr.psu.edu/directory/"
@@ -139,12 +142,80 @@ def openalex(person, cache, key):
             "works": [{"year": w.get("publication_year"), "title": (w.get("title") or "").strip()} for w in works if w.get("title")]}
 
 
+RMD = "https://metadata.libraries.psu.edu/v1"
+RMD_HOST = "metadata.libraries.psu.edu"
+
+# RMD publishes an IPv6 address that hangs or resets (checked 2026-11-24: curl -6 timed out, curl -4
+# answered in 0.1 s). Python tries IPv6 first, so resolve the RMD host to IPv4 only.
+_getaddrinfo = socket.getaddrinfo
+def _rmd_ipv4(host, *a, **k):
+    res = _getaddrinfo(host, *a, **k)
+    if host == RMD_HOST:
+        res = [r for r in res if r[0] == socket.AF_INET] or res
+    return res
+socket.getaddrinfo = _rmd_ipv4
+
+
+def rmd(people, cache, key, refresh):
+    """Publications since 2016 for every roster uid, 50 per request. Returns uid -> list of RMD records."""
+    out = {}
+    uids = [p["uid"] for p in people]
+    for i in range(0, len(uids), 50):
+        chunk = uids[i:i + 50]
+        fn = f"{cache}/rmd/batch_{i:04d}.json"
+        if os.path.exists(fn) and not refresh and json.load(open(fn)).get("_uids") == chunk:
+            res = json.load(open(fn))
+        else:
+            q = urllib.parse.urlencode({"start_year": 2016, "limit": 100, "order_first_by": "publication_date_desc"})
+            req = urllib.request.Request(f"{RMD}/users/publications?{q}", data=json.dumps(chunk).encode(),
+                                         headers={"X-API-Key": key, "Content-Type": "application/json",
+                                                  "Accept": "application/json", "User-Agent": UA})
+            for attempt in range(3):
+                try:
+                    with urllib.request.urlopen(req, timeout=180) as r:
+                        res = json.loads(r.read().decode("utf-8"))
+                    break
+                except Exception as e:
+                    print(f"  RMD batch {i} failed ({attempt+1}/3): {e!r}", file=sys.stderr)
+                    time.sleep(5 * (attempt + 1))
+            else:
+                raise RuntimeError(f"RMD batch starting at {i} failed three times")
+            res["_uids"] = chunk
+            json.dump(res, open(fn, "w"))
+            time.sleep(0.5)
+        for u in chunk:
+            v = res.get(u)
+            if v:
+                out[u] = v.get("data", []) if isinstance(v, dict) else v
+    return out
+
+
+def rmd_summary(recs):
+    pubs, tags = [], Counter()
+    for r in recs:
+        a = r.get("attributes", {})
+        title = (a.get("title") or "").strip().rstrip(".")
+        if not title:
+            continue
+        d = a.get("published_on") or ""
+        pubs.append({"id": r.get("id"), "year": int(d[:4]) if d[:4].isdigit() else None, "title": title,
+                     "psu_ids": sorted({c["psu_user_id"].lower() for c in a.get("contributors") or [] if c.get("psu_user_id")}),
+                     "other_names": [" ".join(x for x in (c.get("first_name"), c.get("last_name")) if x)
+                                     for c in a.get("contributors") or [] if not c.get("psu_user_id")],
+                     "n_authors": len(a.get("contributors") or [])})
+        for t in a.get("tags") or []:
+            if isinstance(t, dict) and t.get("name"):
+                tags[t["name"]] += float(t.get("rank") or 0)
+    pubs.sort(key=lambda x: -(x["year"] or 0))
+    return pubs, [t for t, _ in tags.most_common(8)]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cache", default="/Volumes/Samsung990/ResearchData/coe-team-finder/cache")
     ap.add_argument("--refresh", action="store_true", help="refetch directory and profiles")
     args = ap.parse_args()
-    for d in ("profiles", "openalex"):
+    for d in ("profiles", "openalex", "rmd"):
         os.makedirs(f"{args.cache}/{d}", exist_ok=True)
     key = ""
     kp = os.path.expanduser("~/.config/openalex/api_key")
@@ -152,6 +223,10 @@ def main():
         key = os.environ["OPENALEX_API_KEY"].strip()
     elif os.path.exists(kp):
         key = open(kp).read().strip()
+    rkey = os.environ.get("RMD_API_KEY", "").strip()
+    rp = os.path.expanduser("~/.config/rmd/api_key")
+    if not rkey and os.path.exists(rp):
+        rkey = open(rp).read().strip()
     ov = json.load(open(os.path.join(HERE, "overrides.json"))) if os.path.exists(os.path.join(HERE, "overrides.json")) else {}
 
     people, skipped = directory(args.cache, args.refresh)
@@ -170,6 +245,17 @@ def main():
             done += 1
             if done % 50 == 0:
                 print(f"  fetched {done}/{len(todo)}", flush=True)
+    rmd_data = {}
+    if rkey:
+        rmd_data = rmd(people, args.cache, rkey, args.refresh)
+        print(f"RMD: publications since 2016 for {len(rmd_data)} of {len(people)} faculty")
+    else:
+        prev_path = os.path.join(HERE, "roster.json")
+        if os.path.exists(prev_path) and any("rmd" in x.get("research_source", "")
+                                             for x in json.load(open(prev_path))["people"]):
+            raise SystemExit("no RMD key (RMD_API_KEY or ~/.config/rmd/api_key) but the current roster uses RMD; "
+                             "refusing to rebuild without it")
+        print("RMD: no key found, skipping (profiles and OpenAlex only)", file=sys.stderr)
     review = []
     for n, p in enumerate(people, 1):
         if not os.path.exists(f"{args.cache}/profiles/{p['uid']}.html"):
@@ -183,7 +269,14 @@ def main():
         p["recent_papers"] = sorted(prof["pubs"], key=lambda x: -x["year"])[:6]
         p["_all_pubs"] = prof["pubs"]
         p["research_source"] = "profile" if (prof["areas"] or prof["pubs"]) else ""
-        if not prof["areas"] and not prof["pubs"]:
+        rpubs, rtags = rmd_summary(rmd_data.get(p["uid"], []))
+        if rpubs:
+            p["recent_papers"] = rpubs[:6]
+            p["_rmd_pubs"] = rpubs
+            if rtags:
+                p["topics"] = rtags
+            p["research_source"] = "profile + rmd" if prof["areas"] else "rmd"
+        if not prof["areas"] and not prof["pubs"] and not rpubs:
             oa = openalex(p, args.cache, key)
             if oa and oa["status"] == "matched":
                 p["openalex"] = oa["id"]
@@ -221,6 +314,24 @@ def main():
         hits = byinit.get((w[0][0], w[-1]), []) if len(w[0]) == 1 else byfull.get((w[0], w[-1]), [])
         return hits[0] if len(hits) == 1 else None
 
+    # RMD links: Penn State user IDs where RMD has them (about a quarter of authors), names otherwise.
+    # Each RMD publication counts once per pair. Profile links below are computed as before, and each
+    # pair keeps the larger of the two counts, so RMD can add links but never removes one.
+    rmd_links = Counter()
+    roster_ids = {p["uid"] for p in people}
+    seen = set()
+    for p in people:
+        for pub in p.pop("_rmd_pubs", []):
+            if (pub["year"] or 0) < 2016 or pub["n_authors"] > 25:
+                continue
+            ids = {u for u in pub["psu_ids"] if u in roster_ids} | {p["uid"]}
+            ids |= {o for o in map(match, pub["other_names"]) if o}
+            ids = sorted(ids)
+            for i, a in enumerate(ids):
+                for b in ids[i + 1:]:
+                    if (pub["id"], a, b) not in seen:
+                        seen.add((pub["id"], a, b))
+                        rmd_links[(a, b)] += 1
     links = Counter()
     for p in people:
         for pub in p.pop("_all_pubs", []):
@@ -233,6 +344,8 @@ def main():
                 o = match(nm)
                 if o and o != p["uid"]:
                     links[tuple(sorted((p["uid"], o)))] += 1
+    for k, w in rmd_links.items():
+        links[k] = max(links[k], w)
     co = defaultdict(set)
     for (a, b), w in links.items():
         co[a].add(b); co[b].add(a)
@@ -248,7 +361,9 @@ def main():
             raise SystemExit(f"refusing to write: {len(people)} people ({has(people)} with research) vs "
                              f"{len(prev)} ({has(prev)}) in the current roster.json")
     out = {"built": time.strftime("%Y-%m-%d"),
-           "source": "Penn State College of Engineering Faculty & Staff Directory profiles, with OpenAlex for gaps",
+           "source": "Penn State College of Engineering Faculty & Staff Directory profiles"
+                     + (", Libraries Researcher Metadata Database publications" if rmd_data else "")
+                     + ", with OpenAlex for gaps",
            "count": len(people), "people": people,
            "links": [{"a": a, "b": b, "papers": w} for (a, b), w in sorted(links.items())]}
     json.dump(out, open(os.path.join(HERE, "roster.json"), "w"), indent=1, ensure_ascii=False)

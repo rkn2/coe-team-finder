@@ -16,7 +16,8 @@ Made by Rebecca Napolitano (napolitano@psu.edu), adapted from the Digital Twin H
 All public sources.
 1. The [College of Engineering Faculty & Staff Directory](https://www.engr.psu.edu/directory/index.aspx), filtered to Faculty. Emeriti, adjuncts, instructors, lecturers, postdocs and visitors are left out. Affiliates from other colleges listed in the directory are kept.
 2. Each person's directory profile gives research areas, a research website and recent publications. Co-author links between roster members come from the author lists on those publications (papers since 2016 with at most 25 authors).
-3. When a profile has no research areas and no publications, OpenAlex fills in topics and recent works from a name match restricted to Penn State. These are listed in `review.json` for checking.
+3. The Penn State Libraries' [Researcher Metadata Database](https://metadata.libraries.psu.edu/) (RMD) gives publications since 2016 and Pure topic tags for faculty it covers in the College of Engineering. RMD papers replace the profile list for those people, and RMD author lists (Penn State user IDs where present, names otherwise) add co-author links. A pair keeps the larger of its profile and RMD paper counts.
+4. When someone has no research areas and no publications from either source, OpenAlex fills in topics and recent works from a name match restricted to Penn State. These are listed in `review.json` for checking.
 
 ## Files
 | File | What it is |
@@ -33,7 +34,5 @@ All public sources.
 python3 build_roster.py            # cache on /Volumes/Samsung990/ResearchData/coe-team-finder/cache
 python3 build_roster.py --refresh  # refetch every page
 ```
-The build fetches about 600 profile pages and takes 30 to 60 minutes. An OpenAlex key in `~/.config/openalex/api_key` is used if present.
+The build fetches about 600 profile pages and takes 30 to 60 minutes. An OpenAlex key in `~/.config/openalex/api_key` is used if present. RMD needs a key from the Libraries (`RMD_API_KEY` or `~/.config/rmd/api_key`); once the roster uses RMD, a build without the key stops instead of dropping that data. RMD's IPv6 address does not answer, so the builder connects to it over IPv4.
 
-## Later
-Penn State Pure and the Libraries' Researcher Metadata Database have richer, cleaner data behind API keys. If the college gets one, `build_roster.py` can switch sources.
